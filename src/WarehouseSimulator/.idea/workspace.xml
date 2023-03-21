@@ -20,20 +20,15 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a74c1f42-b68f-45ac-9791-83ba443f3396" name="Changes" comment="Implement">
-      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../design/ObjectiveStorageModel/ObjectiveStorageModel.qmlproject.qtds" beforeDir="false" afterPath="$PROJECT_DIR$/../../design/ObjectiveStorageModel/ObjectiveStorageModel.qmlproject.qtds" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ObjectiveStorageModel/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ObjectiveStorageModel/.idea/ObjectiveStorageModel.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ObjectiveStorageModel/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ObjectiveStorageModel/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ObjectiveStorageModel/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ObjectiveStorageModel/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ObjectiveStorageModel/CMakeLists.txt.user" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ObjectiveStorageModel/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ObjectiveStorageModel/mainwindow.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ObjectiveStorageModel/mainwindow.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ObjectiveStorageModel/mainwindow.ui" beforeDir="false" />
+    <list default="true" id="a74c1f42-b68f-45ac-9791-83ba443f3396" name="Changes" comment="Implement some ui and logic">
+      <change afterPath="$PROJECT_DIR$/qtWidgetUI/productcreator.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/qtWidgetUI/productcreator.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/qtWidgetUI/productcreator.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qtWidgetUI/mainwindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/mainwindow.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qtWidgetUI/mainwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/mainwindow.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qtWidgetUI/mainwindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/mainwindow.ui" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +75,11 @@
   }
 }</component>
   <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WarehouseSimulator" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WarehouseSimulator" TARGET_NAME="WarehouseSimulator" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="WarehouseSimulator" RUN_TARGET_NAME="WarehouseSimulator">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />

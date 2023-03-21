@@ -28,7 +28,6 @@ private:
 
 private slots:
     void onCreateProductBtnClick();
-    void onProductBtnClick(ProductSize productSize);
 };
 
 

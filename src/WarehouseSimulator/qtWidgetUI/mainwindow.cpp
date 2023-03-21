@@ -6,6 +6,7 @@
 
 #include "mainwindow.h"
 #include "ui_MainWindow.h"
+#include "productcreator.h"
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -15,36 +16,15 @@ MainWindow::MainWindow(QWidget *parent) :
 
     connect(ui->createProductBtn, SIGNAL(clicked()), this,
             SLOT(onCreateProductBtnClick()));
-    connect(ui->smallProductBtn, SIGNAL(clicked()), this,
-            SLOT(onProductBtnClick(ProductSize::Small)));
-    connect(ui->mediumProductBtn, SIGNAL(clicked()), this,
-            SLOT(onProductBtnClick(ProductSize::Medium)));
-    connect(ui->bigProductBtn, SIGNAL(clicked()), this,
-            SLOT(onProductBtnClick(ProductSize::Big)));
-
-    madeUnVisible();
 }
 
 MainWindow::~MainWindow() {
     delete ui;
 }
 
-void MainWindow::madeUnVisible() {
-    ui->smallProductBtn->setHidden(true);
-    ui->mediumProductBtn->setHidden(true);
-    ui->bigProductBtn->setHidden(true);
-}
-
 void MainWindow::onCreateProductBtnClick() {
-    ui->smallProductBtn->setHidden(false);
-    ui->mediumProductBtn->setHidden(false);
-    ui->bigProductBtn->setHidden(false);
+    ProductCreator *productCreatorBox = new ProductCreator(this);
+    productCreatorBox->show();
 }
 
-void MainWindow::onProductBtnClick(ProductSize productSize) {
-    madeUnVisible();
 
-    switch (productSize) {
-
-    }
-}
