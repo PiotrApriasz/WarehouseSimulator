@@ -6,8 +6,17 @@
 #define WAREHOUSESIMULATOR_PRODUCT_H
 
 
-class Product {
+#include <string>
+#include "enums/productsize.h"
 
+class Product {
+public:
+    explicit Product(std::string name, std::string imagePath, ProductSize productSize);
+
+protected:
+    std::string m_name;
+    std::string m_imagePath;
+    ProductSize m_productSize;
 };
 
 

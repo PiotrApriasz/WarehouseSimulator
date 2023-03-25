@@ -6,6 +6,7 @@
 #define WAREHOUSESIMULATOR_PRODUCTCREATOR_H
 
 #include <QDialog>
+#include "customWidgets/productwidget.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -22,6 +23,14 @@ public:
 
 private:
     Ui::ProductCreator *ui;
+    QWidget* m_mainWindow;
+
+signals:
+    ProductWidget* productAdded(ProductWidget *widget);
+
+private slots:
+    void onCancelBtnClick();
+    void onCreateBtnClick();
 };
 
 

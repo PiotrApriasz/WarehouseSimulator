@@ -7,7 +7,9 @@
 
 #include <QMainWindow>
 #include <QPushButton>
-#include "../businessLogic/productsize.h"
+#include "../businessLogic/enums/productsize.h"
+#include "productcreator.h"
+#include "events/clickhandler.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -23,11 +25,14 @@ public:
     ~MainWindow() override;
 
 private:
+    ProductCreator* m_productCB;
     Ui::MainWindow *ui;
-    void madeUnVisible();
+    ClickHandler *m_clickHanflerw1f4;
 
 private slots:
     void onCreateProductBtnClick();
+    void addNewProduct(QWidget *widget);
+    void moveProductToWardrobe(QWidget *widget);
 };
 
 

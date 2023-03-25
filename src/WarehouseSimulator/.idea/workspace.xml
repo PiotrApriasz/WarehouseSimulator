@@ -20,15 +20,26 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a74c1f42-b68f-45ac-9791-83ba443f3396" name="Changes" comment="Implement some ui and logic">
-      <change afterPath="$PROJECT_DIR$/qtWidgetUI/productcreator.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/qtWidgetUI/productcreator.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/qtWidgetUI/productcreator.ui" afterDir="false" />
+    <list default="true" id="a74c1f42-b68f-45ac-9791-83ba443f3396" name="Changes" comment="Add product creator dialog">
+      <change afterPath="$PROJECT_DIR$/businessLogic/enums/products.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/businessLogic/gamingconsole.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/businessLogic/gamingconsole.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/qtWidgetUI/customWidgets/productwidget.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/qtWidgetUI/customWidgets/productwidget.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/qtWidgetUI/events/clickhandler.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessLogic/product.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/product.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessLogic/product.h" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/product.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessLogic/productsize.h" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/enums/productsize.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qtWidgetUI/customWidgets/productButton.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/qtWidgetUI/customWidgets/productButton.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/qtWidgetUI/mainwindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/mainwindow.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/qtWidgetUI/mainwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/mainwindow.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/qtWidgetUI/mainwindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/mainwindow.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qtWidgetUI/productcreator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/productcreator.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qtWidgetUI/productcreator.h" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/productcreator.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qtWidgetUI/productcreator.ui" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/productcreator.ui" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,9 +82,15 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\University\PW\PS1\ZCPP\ObjectiveStorageModel\src\WarehouseSimulator\businessLogic\enums" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
@@ -96,7 +113,19 @@
       <updated>1679270220389</updated>
       <workItem from="1679270222002" duration="12135000" />
       <workItem from="1679421970678" duration="1000" />
+      <workItem from="1679520482340" duration="3083000" />
+      <workItem from="1679523616379" duration="4738000" />
+      <workItem from="1679529221515" duration="12173000" />
+      <workItem from="1679742724521" duration="11778000" />
     </task>
+    <task id="LOCAL-00001" summary="Add product creator dialog">
+      <created>1679424798588</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679424798588</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,5 +141,13 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add product creator dialog" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add product creator dialog" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
