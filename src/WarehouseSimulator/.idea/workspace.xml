@@ -20,24 +20,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a74c1f42-b68f-45ac-9791-83ba443f3396" name="Changes" comment="Implement first version of creating product and adding it to wardrobe shelf">
-      <change afterPath="$PROJECT_DIR$/businessLogic/enums/accesspolicies.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/businessLogic/wardrobe.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/businessLogic/wardrobe.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/businessLogic/enums/productsize.h" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/enums/sizes.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/businessLogic/gamingconsole.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/gamingconsole.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/businessLogic/gamingconsole.h" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/gamingconsole.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/businessLogic/product.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/product.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/businessLogic/product.h" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/product.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qtWidgetUI/customWidgets/productwidget.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/customWidgets/productwidget.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qtWidgetUI/customWidgets/productwidget.h" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/customWidgets/productwidget.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qtWidgetUI/mainwindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/mainwindow.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qtWidgetUI/mainwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/mainwindow.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qtWidgetUI/mainwindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/mainwindow.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qtWidgetUI/productcreator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/productcreator.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="a74c1f42-b68f-45ac-9791-83ba443f3396" name="Changes" comment="Use Product class to create product widgets" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -113,7 +96,7 @@
       <workItem from="1679520482340" duration="3083000" />
       <workItem from="1679523616379" duration="4738000" />
       <workItem from="1679529221515" duration="12173000" />
-      <workItem from="1679742724521" duration="24841000" />
+      <workItem from="1679742724521" duration="25165000" />
     </task>
     <task id="LOCAL-00001" summary="Add product creator dialog">
       <created>1679424798588</created>
@@ -129,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679763179918</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Use Product class to create product widgets">
+      <created>1679859172521</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679859172521</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,7 +139,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add product creator dialog" />
     <MESSAGE value="Implement first version of creating product and adding it to wardrobe shelf" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement first version of creating product and adding it to wardrobe shelf" />
+    <MESSAGE value="Use Product class to create product widgets" />
+    <option name="LAST_COMMIT_MESSAGE" value="Use Product class to create product widgets" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

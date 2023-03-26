@@ -11,6 +11,8 @@
 class GamingConsole : public Product {
 public:
     explicit GamingConsole(std::string name, std::string imagePath, Sizes size);
+
+    std::string getProductSendInfo() override;
 };
 
 

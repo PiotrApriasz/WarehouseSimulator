@@ -17,6 +17,8 @@ public:
     std::string getImagePath;
     Sizes getSize();
 
+    virtual std::string getProductSendInfo();
+
 protected:
     std::string m_name;
     std::string m_imagePath;

@@ -15,3 +15,7 @@ Product::Product(std::string name, std::string imagePath, Sizes size) {
 Sizes Product::getSize() {
     return m_productSize;
 }
+
+std::string Product::getProductSendInfo() {
+    return "Product has been send";
+}
