@@ -7,15 +7,20 @@
 
 
 #include <QWidget>
+#include "../../businessLogic/product.h"
 
 class ProductWidget : public QWidget {
 public:
-    ProductWidget(QWidget *parent = nullptr);
+    ProductWidget(QWidget *parent, Product *product);
 
 private:
+    bool m_isHighlighted;
+    Product *m_product;
+
     void paintEvent(QPaintEvent* event) override;
     void mousePressEvent(QMouseEvent* event) override;
-    bool m_isHighlighted;
+    void createWidget();
+
 };
 
 

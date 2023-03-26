@@ -7,16 +7,20 @@
 
 
 #include <string>
-#include "enums/productsize.h"
+#include "enums/sizes.h"
 
 class Product {
 public:
-    explicit Product(std::string name, std::string imagePath, ProductSize productSize);
+    explicit Product(std::string name, std::string imagePath, Sizes size);
+
+    std::string getName();
+    std::string getImagePath;
+    Sizes getSize();
 
 protected:
     std::string m_name;
     std::string m_imagePath;
-    ProductSize m_productSize;
+    Sizes m_productSize;
 };
 
 

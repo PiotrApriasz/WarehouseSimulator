@@ -3,9 +3,9 @@
 //
 
 #include "GamingConsole.h"
-#include "enums/productsize.h"
+#include "enums/sizes.h"
 
-GamingConsole::GamingConsole(std::string name, std::string imagePath, ProductSize productSize) :
-        Product(name, imagePath, productSize) {
+GamingConsole::GamingConsole(std::string name, std::string imagePath, Sizes size) :
+        Product(name, imagePath, size) {
 
 }

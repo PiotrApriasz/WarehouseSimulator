@@ -36,12 +36,13 @@ void ProductCreator::onCancelBtnClick() {
 }
 
 void ProductCreator::onCreateBtnClick() {
-    auto index = Products(ui->productCB->currentIndex());
+    auto selectedProduct = Products(ui->productCB->currentIndex());
+    auto selectedSize = Sizes(ui->sizeCB->currentIndex());
 
-    auto *myWidget = new ProductWidget(this);
-
-    switch (index) {
+    switch (selectedProduct) {
         case Products::GamingConsole : {
+            auto *myWidget = new ProductWidget(this,
+                                               new Product("Gaming Console", "test", selectedSize));
             emit ProductCreator::productAdded(myWidget);
             break;
         }

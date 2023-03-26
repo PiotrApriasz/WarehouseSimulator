@@ -168,12 +168,12 @@
      </property>
     </widget>
    </widget>
-   <widget class="QFrame" name="frame_3">
+   <widget class="QFrame" name="war1fr1">
     <property name="geometry">
      <rect>
       <x>20</x>
       <y>100</y>
-      <width>291</width>
+      <width>140</width>
       <height>131</height>
      </rect>
     </property>
@@ -184,7 +184,7 @@
      <enum>QFrame::Plain</enum>
     </property>
    </widget>
-   <widget class="QFrame" name="frame_4">
+   <widget class="QFrame" name="war1fr3">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -200,12 +200,12 @@
      <enum>QFrame::Plain</enum>
     </property>
    </widget>
-   <widget class="QFrame" name="frame_5">
+   <widget class="QFrame" name="war1fr4">
     <property name="geometry">
      <rect>
       <x>20</x>
       <y>380</y>
-      <width>291</width>
+      <width>90</width>
       <height>131</height>
      </rect>
     </property>
@@ -269,7 +269,7 @@
      <rect>
       <x>370</x>
       <y>380</y>
-      <width>291</width>
+      <width>140</width>
       <height>131</height>
      </rect>
     </property>
@@ -285,7 +285,7 @@
      <rect>
       <x>370</x>
       <y>520</y>
-      <width>291</width>
+      <width>140</width>
       <height>131</height>
      </rect>
     </property>
@@ -317,7 +317,7 @@
      <rect>
       <x>720</x>
       <y>100</y>
-      <width>291</width>
+      <width>90</width>
       <height>131</height>
      </rect>
     </property>
@@ -350,6 +350,118 @@
       <x>720</x>
       <y>380</y>
       <width>291</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+   </widget>
+   <widget class="QFrame" name="war1fr2">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>100</y>
+      <width>140</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame_15">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>380</y>
+      <width>90</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame_16">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>380</y>
+      <width>90</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame_17">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>520</y>
+      <width>140</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame_18">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>380</y>
+      <width>140</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame_19">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>100</y>
+      <width>90</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame_20">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>100</y>
+      <width>90</width>
       <height>131</height>
      </rect>
     </property>

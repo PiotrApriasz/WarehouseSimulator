@@ -8,24 +8,41 @@
 #include <QMimeData>
 #include <QPainter>
 
-ProductWidget::ProductWidget(QWidget *parent)
-        : QWidget(parent)
-{
-    setFixedSize(100, 100);
-    setStyleSheet("background-color: red;");
-    m_isHighlighted = false;
+ProductWidget::ProductWidget(QWidget *parent, Product *product)
+        : QWidget(parent),
+        m_product(product) {
+    createWidget();
 }
 
 void ProductWidget::paintEvent(QPaintEvent* event) {
     QPainter painter(this);
     if (m_isHighlighted) {
-        painter.fillRect(rect(), QColor(255, 255, 0, 128)); // Fill with yellow color
+        painter.fillRect(rect(), QColor(255, 255, 0, 128));
     }
-    // Draw the contents of the widget
 }
 
 void ProductWidget::mousePressEvent(QMouseEvent* event) {
     m_isHighlighted = !m_isHighlighted;
-    update(); // Redraw the widget to show the highlight
+    update();
     QWidget::mousePressEvent(event);
+}
+
+void ProductWidget::createWidget() {
+    switch(m_product->getSize())
+    {
+        case Sizes::Small : {
+            setFixedSize(25, 25);
+            break;
+        }
+        case Sizes::Medium : {
+            setFixedSize(50, 50);
+            break;
+        }
+        case Sizes::Big : {
+            setFixedSize(100, 100);
+            break;
+        }
+    }
+
+    setStyleSheet("background-color: red;");
 }

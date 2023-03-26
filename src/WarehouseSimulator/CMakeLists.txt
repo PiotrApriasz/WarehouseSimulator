@@ -14,7 +14,7 @@ find_package(Qt6 COMPONENTS
         Widgets
         REQUIRED)
 
-add_executable(WarehouseSimulator main.cpp qtWidgetUI/mainwindow.cpp qtWidgetUI/mainwindow.h qtWidgetUI/mainwindow.ui businessLogic/product.cpp businessLogic/product.h businessLogic/enums/productsize.h qtWidgetUI/productcreator.cpp qtWidgetUI/productcreator.h qtWidgetUI/productcreator.ui businessLogic/gamingconsole.cpp businessLogic/gamingconsole.h businessLogic/enums/products.h qtWidgetUI/customWidgets/productwidget.cpp qtWidgetUI/customWidgets/productwidget.h qtWidgetUI/events/clickhandler.h)
+add_executable(WarehouseSimulator main.cpp qtWidgetUI/mainwindow.cpp qtWidgetUI/mainwindow.h qtWidgetUI/mainwindow.ui businessLogic/product.cpp businessLogic/product.h businessLogic/enums/sizes.h qtWidgetUI/productcreator.cpp qtWidgetUI/productcreator.h qtWidgetUI/productcreator.ui businessLogic/gamingconsole.cpp businessLogic/gamingconsole.h businessLogic/enums/products.h qtWidgetUI/customWidgets/productwidget.cpp qtWidgetUI/customWidgets/productwidget.h qtWidgetUI/events/clickhandler.h businessLogic/enums/accesspolicies.h businessLogic/wardrobe.cpp businessLogic/wardrobe.h)
 target_link_libraries(WarehouseSimulator
         Qt::Core
         Qt::Gui

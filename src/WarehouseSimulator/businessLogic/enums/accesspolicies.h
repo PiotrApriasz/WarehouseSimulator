@@ -1,0 +1,12 @@
+//
+// Created by piotr on 26.03.2023.
+//
+
+#ifndef WAREHOUSESIMULATOR_ACCESSPOLICIES_H
+#define WAREHOUSESIMULATOR_ACCESSPOLICIES_H
+
+enum class AccessPolicies {
+    FIFO = 0, LIFO = 1, Free = 2
+};
+
+#endif //WAREHOUSESIMULATOR_ACCESSPOLICIES_H

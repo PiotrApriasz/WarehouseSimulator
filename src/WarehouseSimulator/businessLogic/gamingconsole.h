@@ -6,11 +6,11 @@
 #define WAREHOUSESIMULATOR_GAMINGCONSOLE_H
 
 #include "product.h"
-#include "enums/productsize.h"
+#include "enums/sizes.h"
 
 class GamingConsole : public Product {
 public:
-    explicit GamingConsole(std::string name, std::string imagePath, ProductSize productSize);
+    explicit GamingConsole(std::string name, std::string imagePath, Sizes size);
 };
 
 

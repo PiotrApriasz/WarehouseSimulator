@@ -7,7 +7,7 @@
 
 #include <QMainWindow>
 #include <QPushButton>
-#include "../businessLogic/enums/productsize.h"
+#include "../businessLogic/enums/sizes.h"
 #include "productcreator.h"
 #include "events/clickhandler.h"
 
@@ -25,9 +25,9 @@ public:
     ~MainWindow() override;
 
 private:
-    ProductCreator* m_productCB;
+    ProductCreator* m_productDB;
     Ui::MainWindow *ui;
-    ClickHandler *m_clickHanflerw1f4;
+    ClickHandler *m_clickHandlerw1f4;
 
 private slots:
     void onCreateProductBtnClick();

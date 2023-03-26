@@ -23,18 +23,18 @@ MainWindow::MainWindow(QWidget *parent) :
     auto central = centralWidget();
     central->setLayout(new QVBoxLayout(central));
 
-    m_productCB = new ProductCreator(this);
+    m_productDB = new ProductCreator(this);
 
     connect(ui->createProductBtn, SIGNAL(clicked()), this,
             SLOT(onCreateProductBtnClick()));
 
-    connect(m_productCB, &ProductCreator::productAdded, this,
+    connect(m_productDB, &ProductCreator::productAdded, this,
             &MainWindow::addNewProduct);
 
-    m_clickHanflerw1f4 = new ClickHandler(ui->wardrobe1Frame4);
-    ui->wardrobe1Frame4->installEventFilter(m_clickHanflerw1f4);
+    m_clickHandlerw1f4 = new ClickHandler(ui->wardrobe1Frame4);
+    ui->wardrobe1Frame4->installEventFilter(m_clickHandlerw1f4);
 
-    connect(m_clickHanflerw1f4, &ClickHandler::clicked, this,
+    connect(m_clickHandlerw1f4, &ClickHandler::clicked, this,
             &MainWindow::moveProductToWardrobe);
 }
 
@@ -43,7 +43,7 @@ MainWindow::~MainWindow() {
 }
 
 void MainWindow::onCreateProductBtnClick() {
-    m_productCB->show();
+    m_productDB->show();
 }
 
 void MainWindow::addNewProduct(QWidget *widget) {
@@ -72,5 +72,5 @@ void MainWindow::moveProductToWardrobe(QWidget *widget) {
 
     widget->setLayout(frameLayout);
 
-    widget->removeEventFilter(m_clickHanflerw1f4);
+    widget->removeEventFilter(m_clickHandlerw1f4);
 }
