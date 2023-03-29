@@ -20,7 +20,17 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a74c1f42-b68f-45ac-9791-83ba443f3396" name="Changes" comment="Use Product class to create product widgets" />
+    <list default="true" id="a74c1f42-b68f-45ac-9791-83ba443f3396" name="Changes" comment="Add example of polymorphism method">
+      <change afterPath="$PROJECT_DIR$/businessLogic/gamepad.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/businessLogic/gamepad.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/businessLogic/keyboard.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/businessLogic/keyboard.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/businessLogic/tv.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/businessLogic/tv.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessLogic/gamingconsole.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/gamingconsole.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,12 +82,12 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="WarehouseSimulator" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WarehouseSimulator" TARGET_NAME="WarehouseSimulator" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="WarehouseSimulator" RUN_TARGET_NAME="WarehouseSimulator">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WarehouseSimulator" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WarehouseSimulator" TARGET_NAME="WarehouseSimulator" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="WarehouseSimulator" RUN_TARGET_NAME="WarehouseSimulator">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -96,7 +106,8 @@
       <workItem from="1679520482340" duration="3083000" />
       <workItem from="1679523616379" duration="4738000" />
       <workItem from="1679529221515" duration="12173000" />
-      <workItem from="1679742724521" duration="25165000" />
+      <workItem from="1679742724521" duration="28101000" />
+      <workItem from="1680115558938" duration="1465000" />
     </task>
     <task id="LOCAL-00001" summary="Add product creator dialog">
       <created>1679424798588</created>
@@ -119,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679859172521</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add example of polymorphism method">
+      <created>1679859781752</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679859781752</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,7 +158,8 @@
     <MESSAGE value="Add product creator dialog" />
     <MESSAGE value="Implement first version of creating product and adding it to wardrobe shelf" />
     <MESSAGE value="Use Product class to create product widgets" />
-    <option name="LAST_COMMIT_MESSAGE" value="Use Product class to create product widgets" />
+    <MESSAGE value="Add example of polymorphism method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add example of polymorphism method" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

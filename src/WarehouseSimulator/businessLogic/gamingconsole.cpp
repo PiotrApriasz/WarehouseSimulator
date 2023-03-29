@@ -11,5 +11,5 @@ GamingConsole::GamingConsole(std::string name, std::string imagePath, Sizes size
 }
 
 std::string GamingConsole::getProductSendInfo() {
-    return "Gaming Console has been sand. Hope it will be good fo gaming";
+    return "Gaming Console has been sent. Hope it will be good for gaming";
 }
