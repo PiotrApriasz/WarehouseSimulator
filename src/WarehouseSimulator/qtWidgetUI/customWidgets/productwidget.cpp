@@ -31,15 +31,15 @@ void ProductWidget::createWidget() {
     switch(m_product->getSize())
     {
         case Sizes::Small : {
-            setFixedSize(25, 25);
+            setFixedSize(60, 100);
             break;
         }
         case Sizes::Medium : {
-            setFixedSize(50, 50);
+            setFixedSize(100, 100);
             break;
         }
         case Sizes::Big : {
-            setFixedSize(100, 100);
+            setFixedSize(180, 100);
             break;
         }
     }
