@@ -10,6 +10,10 @@
 #include "ui_ProductCreator.h"
 #include "../businessLogic/enums/products.h"
 #include "../businessLogic/helpers/imagehelper.h"
+#include "../businessLogic/gamingconsole.h"
+#include "../businessLogic/gamepad.h"
+#include "../businessLogic/tv.h"
+#include "../businessLogic/keyboard.h"
 
 
 ProductCreator::ProductCreator(QWidget *parent) :
@@ -40,11 +44,40 @@ void ProductCreator::onCreateBtnClick() {
     auto selectedProduct = Products(ui->productCB->currentIndex());
     auto selectedSize = Sizes(ui->sizeCB->currentIndex());
 
+    auto product = getProductText(static_cast<int>(selectedProduct));
+    auto imagePath = ImageHelper::getProductImagePath(selectedProduct, selectedSize);
+
     switch (selectedProduct) {
         case Products::GamingConsole : {
-            auto *myWidget = new ProductWidget(this,
-                                               new Product("Gaming Console", "test", selectedSize));
-            emit ProductCreator::productAdded(myWidget);
+            auto *widget = new ProductWidget(this,
+                                               new GamingConsole(product,
+                                                                        imagePath,
+                                                                        selectedSize));
+            emit ProductCreator::productAdded(widget);
+            break;
+        }
+        case Products::GamePad : {
+            auto *widget = new ProductWidget(this,
+                                             new Gamepad(product,
+                                                               imagePath,
+                                                               selectedSize));
+            emit ProductCreator::productAdded(widget);
+            break;
+        }
+        case Products::TV : {
+            auto *widget = new ProductWidget(this,
+                                             new TV(product,
+                                                               imagePath,
+                                                               selectedSize));
+            emit ProductCreator::productAdded(widget);
+            break;
+        }
+        case Products::Keyboard : {
+            auto *widget = new ProductWidget(this,
+                                             new Keyboard(product,
+                                                               imagePath,
+                                                               selectedSize));
+            emit ProductCreator::productAdded(widget);
             break;
         }
     }

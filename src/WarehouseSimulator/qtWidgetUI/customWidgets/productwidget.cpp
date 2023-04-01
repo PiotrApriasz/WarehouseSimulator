@@ -7,6 +7,8 @@
 #include <QDrag>
 #include <QMimeData>
 #include <QPainter>
+#include <sstream>
+#include <QLabel>
 
 ProductWidget::ProductWidget(QWidget *parent, Product *product)
         : QWidget(parent),
@@ -16,9 +18,6 @@ ProductWidget::ProductWidget(QWidget *parent, Product *product)
 
 void ProductWidget::paintEvent(QPaintEvent* event) {
     QPainter painter(this);
-    if (m_isHighlighted) {
-        painter.fillRect(rect(), QColor(255, 255, 0, 128));
-    }
 }
 
 void ProductWidget::mousePressEvent(QMouseEvent* event) {
@@ -28,8 +27,7 @@ void ProductWidget::mousePressEvent(QMouseEvent* event) {
 }
 
 void ProductWidget::createWidget() {
-    switch(m_product->getSize())
-    {
+    switch (m_product->getSize()) {
         case Sizes::Small : {
             setFixedSize(60, 100);
             break;
@@ -44,5 +42,9 @@ void ProductWidget::createWidget() {
         }
     }
 
-    setStyleSheet("background-color: red;");
+    std::ostringstream stylesheetSetting;
+    stylesheetSetting << "background-image: url(" << m_product->getImagePath() << ");";
+    std::string stylesheetText = stylesheetSetting.str();
+    std::replace(stylesheetText.begin(), stylesheetText.end(), '\\', '/');
+    setStyleSheet(QString::fromStdString(stylesheetText));
 }

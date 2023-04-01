@@ -19,3 +19,7 @@ Sizes Product::getSize() {
 std::string Product::getProductSendInfo() {
     return "Product has been send";
 }
+
+std::string Product::getImagePath() {
+    return m_imagePath;
+}

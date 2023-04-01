@@ -14,7 +14,7 @@ public:
     explicit Product(std::string name, std::string imagePath, Sizes size);
 
     std::string getName();
-    std::string getImagePath;
+    std::string getImagePath();
     Sizes getSize();
 
     virtual std::string getProductSendInfo();
