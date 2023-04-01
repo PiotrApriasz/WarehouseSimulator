@@ -20,14 +20,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a74c1f42-b68f-45ac-9791-83ba443f3396" name="Changes" comment="Add products classes">
-      <change afterPath="$PROJECT_DIR$/businessLogic/storagebox.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/businessLogic/storagebox.h" afterDir="false" />
+    <list default="true" id="a74c1f42-b68f-45ac-9791-83ba443f3396" name="Changes" comment="Add product images">
+      <change afterPath="$PROJECT_DIR$/businessLogic/helpers/imagehelper.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/businessLogic/helpers/imagehelper.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/businessLogic/wardrobe.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/wardrobe.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/businessLogic/wardrobe.h" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/wardrobe.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qtWidgetUI/customWidgets/productwidget.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/customWidgets/productwidget.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessLogic/enums/products.h" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/enums/products.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessLogic/enums/sizes.h" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/enums/sizes.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qtWidgetUI/productcreator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/productcreator.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +105,7 @@
       <workItem from="1679523616379" duration="4738000" />
       <workItem from="1679529221515" duration="12173000" />
       <workItem from="1679742724521" duration="28101000" />
-      <workItem from="1680115558938" duration="9531000" />
+      <workItem from="1680115558938" duration="16630000" />
     </task>
     <task id="LOCAL-00001" summary="Add product creator dialog">
       <created>1679424798588</created>
@@ -142,7 +142,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680117297142</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Create shell for wardrobe and storagebox classes">
+      <created>1680304672358</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680304672358</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add product images">
+      <created>1680304734312</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680304734312</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,7 +179,20 @@
     <MESSAGE value="Use Product class to create product widgets" />
     <MESSAGE value="Add example of polymorphism method" />
     <MESSAGE value="Add products classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add products classes" />
+    <MESSAGE value="Create shell for wardrobe and storagebox classes" />
+    <MESSAGE value="Add product images" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add product images" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/businessLogic/helpers/imagehelper.cpp</url>
+          <line>40</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

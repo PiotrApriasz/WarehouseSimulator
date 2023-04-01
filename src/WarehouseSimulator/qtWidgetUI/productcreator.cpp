@@ -9,6 +9,7 @@
 #include "productcreator.h"
 #include "ui_ProductCreator.h"
 #include "../businessLogic/enums/products.h"
+#include "../businessLogic/helpers/imagehelper.h"
 
 
 ProductCreator::ProductCreator(QWidget *parent) :
