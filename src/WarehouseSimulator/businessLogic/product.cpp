@@ -23,3 +23,7 @@ std::string Product::getProductSendInfo() {
 std::string Product::getImagePath() {
     return m_imagePath;
 }
+
+std::string Product::getName() {
+    return m_name;
+}

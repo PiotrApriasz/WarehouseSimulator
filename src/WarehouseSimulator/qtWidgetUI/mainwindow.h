@@ -33,6 +33,7 @@ private slots:
     void onCreateProductBtnClick();
     void addNewProduct(QWidget *widget);
     void moveProductToWardrobe(QWidget *widget);
+    void onSendBtnClick();
 };
 
 

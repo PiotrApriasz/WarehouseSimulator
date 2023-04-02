@@ -9,6 +9,9 @@
 #include <QPainter>
 #include <sstream>
 #include <QLabel>
+#include <QGroupBox>
+#include <QVBoxLayout>
+#include <QPushButton>
 
 ProductWidget::ProductWidget(QWidget *parent, Product *product)
         : QWidget(parent),
@@ -16,14 +19,25 @@ ProductWidget::ProductWidget(QWidget *parent, Product *product)
     createWidget();
 }
 
-void ProductWidget::paintEvent(QPaintEvent* event) {
-    QPainter painter(this);
-}
-
 void ProductWidget::mousePressEvent(QMouseEvent* event) {
-    m_isHighlighted = !m_isHighlighted;
-    update();
-    QWidget::mousePressEvent(event);
+    qDebug() << "Widget was clicked: " << this->objectName();
+    auto storageBox = static_cast<QWidget*>(parent());
+    auto shipmentGB = parent()->parent()->findChild<QGroupBox*>("shipmentGB");
+
+    if (shipmentGB->layout() == nullptr) {
+        QLayout* storageBoxLayout = storageBox->layout();
+        storageBoxLayout->removeWidget(this);
+        this->setParent(nullptr);
+        storageBox->setLayout(storageBoxLayout);
+
+        auto *layout = new QVBoxLayout(shipmentGB);
+        layout->addWidget(this, 0, Qt::AlignCenter);
+        shipmentGB->setLayout(layout);
+
+        parent()->parent()->findChild<QPushButton*>("sendBtn")->setVisible(true);
+
+        QWidget::mousePressEvent(event);
+    }
 }
 
 void ProductWidget::createWidget() {
@@ -47,4 +61,8 @@ void ProductWidget::createWidget() {
     std::string stylesheetText = stylesheetSetting.str();
     std::replace(stylesheetText.begin(), stylesheetText.end(), '\\', '/');
     setStyleSheet(QString::fromStdString(stylesheetText));
+}
+
+Product *ProductWidget::getProduct() {
+    return m_product;
 }

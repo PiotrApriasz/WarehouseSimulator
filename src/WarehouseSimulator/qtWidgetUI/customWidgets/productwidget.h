@@ -12,12 +12,11 @@
 class ProductWidget : public QWidget {
 public:
     ProductWidget(QWidget *parent, Product *product);
+    Product *getProduct();
 
 private:
-    bool m_isHighlighted;
     Product *m_product;
 
-    void paintEvent(QPaintEvent* event) override;
     void mousePressEvent(QMouseEvent* event) override;
     void createWidget();
 
