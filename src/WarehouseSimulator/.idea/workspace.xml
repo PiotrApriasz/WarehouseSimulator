@@ -20,13 +20,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a74c1f42-b68f-45ac-9791-83ba443f3396" name="Changes" comment="Create widget with products images">
+    <list default="true" id="a74c1f42-b68f-45ac-9791-83ba443f3396" name="Changes" comment="Implement taking of product from wardrobe and shipment">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/businessLogic/product.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/product.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qtWidgetUI/customWidgets/productwidget.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/customWidgets/productwidget.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qtWidgetUI/customWidgets/productwidget.h" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/customWidgets/productwidget.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qtWidgetUI/mainwindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/mainwindow.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qtWidgetUI/mainwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/mainwindow.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessLogic/storagebox.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/storagebox.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessLogic/storagebox.h" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/storagebox.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessLogic/wardrobe.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/wardrobe.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessLogic/wardrobe.h" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/wardrobe.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/qtWidgetUI/mainwindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/mainwindow.ui" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680312622142</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Implement taking of product from wardrobe and shipment">
+      <created>1680393763925</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680393763925</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,7 +191,8 @@
     <MESSAGE value="Create shell for wardrobe and storagebox classes" />
     <MESSAGE value="Add product images" />
     <MESSAGE value="Implement getting image path method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement getting image path method" />
+    <MESSAGE value="Implement taking of product from wardrobe and shipment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement taking of product from wardrobe and shipment" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

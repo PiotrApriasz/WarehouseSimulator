@@ -13,7 +13,7 @@ Wardrobe<AccessPolicyType>::Wardrobe(std::vector<std::vector<StorageBox>> shelve
 {}
 
 template <AccessPolicies AccessPolicyType>
-bool Wardrobe<AccessPolicyType>::addProduct(Product product) {
+bool Wardrobe<AccessPolicyType>::addProduct(Product product, std::string storageBoxId) {
 
 }
 
@@ -29,7 +29,7 @@ Wardrobe<AccessPolicies::FIFO>::Wardrobe(std::vector<std::vector<StorageBox>> sh
         m_wardrobeId(std::move(wardrobeId))
 {}
 
-bool Wardrobe<AccessPolicies::FIFO>::addProduct(Product product) {
+bool Wardrobe<AccessPolicies::FIFO>::addProduct(Product product, std::string storageBoxId) {
 
 }
 
@@ -42,7 +42,7 @@ Wardrobe<AccessPolicies::LIFO>::Wardrobe(std::vector<std::vector<StorageBox>> sh
         m_wardrobeId(std::move(wardrobeId))
 {}
 
-bool Wardrobe<AccessPolicies::LIFO>::addProduct(Product product) {
+bool Wardrobe<AccessPolicies::LIFO>::addProduct(Product product, std::string storageBoxId) {
 
 }
 

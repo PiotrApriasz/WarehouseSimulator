@@ -11,13 +11,13 @@
 class StorageBox {
 public:
     StorageBox(Sizes size, std::string storageBoxId);
-    void setProduct(Product product);
-    Product getProduct();
+    bool setProduct(Product *product);
+    Product *getProduct();
     Sizes getSize();
     std::string getStorageBoxId();
 
 private:
-    Product m_product;
+    Product *m_product;
     Sizes m_size;
     std::string m_storageBoxId;
 };

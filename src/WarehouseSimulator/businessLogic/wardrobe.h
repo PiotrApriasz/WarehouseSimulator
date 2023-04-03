@@ -15,7 +15,7 @@
 template <AccessPolicies AccessPolicyType> class Wardrobe {
 public:
     Wardrobe(std::vector<std::vector<StorageBox>> shelves, std::string wardeobeId);
-    bool addProduct(Product product);
+    bool addProduct(Product product, std::string storageBoxId);
     bool removerProduct(std::string storageBoxId);
 
 private:
@@ -27,7 +27,7 @@ private:
 template <> class Wardrobe<AccessPolicies::FIFO> {
 public:
     Wardrobe(std::vector<std::vector<StorageBox>> shelves, std::string wardeobeId);
-    bool addProduct(Product product);
+    bool addProduct(Product product, std::string storageBoxId);
     bool removerProduct(std::string storageBoxId);
 
 private:
@@ -39,7 +39,7 @@ private:
 template <> class Wardrobe<AccessPolicies::LIFO> {
 public:
     Wardrobe(std::vector<std::vector<StorageBox>> shelves, std::string wardeobeId);
-    bool addProduct(Product product);
+    bool addProduct(Product product, std::string storageBoxId);
     bool removerProduct(std::string storageBoxId);
 
 private:
