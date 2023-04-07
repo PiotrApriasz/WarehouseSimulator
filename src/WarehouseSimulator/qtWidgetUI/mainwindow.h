@@ -10,6 +10,7 @@
 #include "../businessLogic/enums/sizes.h"
 #include "productcreator.h"
 #include "events/clickhandler.h"
+#include "../businessLogic/wardrobe.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -27,7 +28,17 @@ public:
 private:
     ProductCreator* m_productDB;
     Ui::MainWindow *ui;
-    ClickHandler *m_clickHandlerw1f4;
+
+    Wardrobe<AccessPolicies::FIFO> *m_fifoWardrobe;
+    Wardrobe<AccessPolicies::LIFO> *m_lifoWardrobe;
+    Wardrobe<AccessPolicies::Free> *m_freeWardrobe;
+
+    void initializeWardrobes();
+    void initializeWardrobe1ClickHandlers();
+
+
+    bool addProductToStorageBox(Product *product, std::string storageBoxId);
+    void showMessageBox(const std::string& title, std::string  text);
 
 private slots:
     void onCreateProductBtnClick();

@@ -35,11 +35,9 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(m_productDB, &ProductCreator::productAdded, this,
             &MainWindow::addNewProduct);
 
-    m_clickHandlerw1f4 = new ClickHandler(ui->wardrobe1Frame4);
-    ui->wardrobe1Frame4->installEventFilter(m_clickHandlerw1f4);
+    initializeWardrobe1ClickHandlers();
 
-    connect(m_clickHandlerw1f4, &ClickHandler::clicked, this,
-            &MainWindow::moveProductToWardrobe);
+    initializeWardrobes();
 }
 
 MainWindow::~MainWindow() {
@@ -69,10 +67,21 @@ void MainWindow::moveProductToWardrobe(QWidget *widget) {
         delete widget->layout();
     }
 
-    QWidget* wardrobeChildWidget = widget->findChild<QWidget*>("Product");
-    QWidget* childWidget = ui->factoryGB->findChild<QWidget*>("Product");
+    auto wardrobeChildWidget = widget->findChild<QWidget*>("Product");
+    auto childWidget = ui->factoryGB->findChild<QWidget*>("Product");
+    auto productWidget = dynamic_cast<ProductWidget*>(childWidget);
 
     if (wardrobeChildWidget == nullptr && childWidget != nullptr) {
+
+        if (!m_fifoWardrobe->addProduct(productWidget->getProduct(), widget->objectName().toStdString())) {
+            QMessageBox msgBox;
+            msgBox.setWindowTitle("Product Creation");
+            msgBox.setText("Product can't be added!");
+            msgBox.exec();
+
+            return;
+        }
+
         QLayout* groupBoxLayout = ui->factoryGB->layout();
         groupBoxLayout->removeWidget(childWidget);
         childWidget->setParent(nullptr);
@@ -86,15 +95,102 @@ void MainWindow::moveProductToWardrobe(QWidget *widget) {
 }
 
 void MainWindow::onSendBtnClick() {
-    auto product = static_cast<ProductWidget*>(ui->shipmentGB->findChild<QWidget*>("Product"));
+    auto product = dynamic_cast<ProductWidget*>(ui->shipmentGB->findChild<QWidget*>("Product"));
 
-    QMessageBox msgBox;
-    msgBox.setWindowTitle("ProductShipment");
-    msgBox.setText(QString::fromStdString(product->getProduct()->getProductSendInfo()));
-    msgBox.exec();
+    showMessageBox("Product Shipment", product->getProduct()->getProductSendInfo());
 
     delete product;
     delete ui->shipmentGB->layout();
 
     ui->sendBtn->setVisible(false);
+}
+
+void MainWindow::initializeWardrobes() {
+    std::vector<StorageBox> wardrobe1StorageBoxes =  {
+                StorageBox(Sizes::Medium, "war1fr1"),
+                StorageBox(Sizes::Medium, "war1fr2"),
+                StorageBox(Sizes::Big, "war1fr3"),
+                StorageBox(Sizes::Small, "war1fr4"),
+                StorageBox(Sizes::Small, "war1fr5"),
+                StorageBox(Sizes::Small, "war1fr6"),
+                StorageBox(Sizes::Big, "war1fr7"),
+    };
+
+    m_fifoWardrobe = new Wardrobe<AccessPolicies::FIFO>(wardrobe1StorageBoxes, "war1");
+}
+
+void MainWindow::initializeWardrobe1ClickHandlers() {
+    auto clickHandler_w1fr1 = new ClickHandler(ui->war1fr1);
+    ui->war1fr1->installEventFilter(clickHandler_w1fr1);
+
+    connect(clickHandler_w1fr1, &ClickHandler::clicked, this,
+            &MainWindow::moveProductToWardrobe);
+
+    auto clickHandler_w1fr2 = new ClickHandler(ui->war1fr2);
+    ui->war1fr2->installEventFilter(clickHandler_w1fr2);
+
+    connect(clickHandler_w1fr2, &ClickHandler::clicked, this,
+            &MainWindow::moveProductToWardrobe);
+
+    auto clickHandler_w1fr3 = new ClickHandler(ui->war1fr3);
+    ui->war1fr3->installEventFilter(clickHandler_w1fr3);
+
+    connect(clickHandler_w1fr3, &ClickHandler::clicked, this,
+            &MainWindow::moveProductToWardrobe);
+
+    auto clickHandler_w1fr4 = new ClickHandler(ui->war1fr4);
+    ui->war1fr4->installEventFilter(clickHandler_w1fr4);
+
+    connect(clickHandler_w1fr4, &ClickHandler::clicked, this,
+            &MainWindow::moveProductToWardrobe);
+
+    auto clickHandler_w1fr5 = new ClickHandler(ui->war1fr5);
+    ui->war1fr5->installEventFilter(clickHandler_w1fr5);
+
+    connect(clickHandler_w1fr5, &ClickHandler::clicked, this,
+            &MainWindow::moveProductToWardrobe);
+
+    auto clickHandler_w1fr6 = new ClickHandler(ui->war1fr6);
+    ui->war1fr6->installEventFilter(clickHandler_w1fr6);
+
+    connect(clickHandler_w1fr6, &ClickHandler::clicked, this,
+            &MainWindow::moveProductToWardrobe);
+
+    auto clickHandler_w1fr7 = new ClickHandler(ui->war1fr7);
+    ui->war1fr7->installEventFilter(clickHandler_w1fr7);
+
+    connect(clickHandler_w1fr7, &ClickHandler::clicked, this,
+            &MainWindow::moveProductToWardrobe);
+}
+
+bool MainWindow::addProductToStorageBox(Product *product, std::string storageBoxId) {
+    auto wardrobeId = storageBoxId.substr(0, 4);
+
+    if (wardrobeId == "war1") {
+        if (!m_fifoWardrobe->addProduct(product, storageBoxId)) {
+            showMessageBox("Product Creation", "Product can't be added");
+            return false;
+        }
+    }
+    /*else if (wardrobeId == "war2") {
+        if (!m_lifoWardrobe->addProduct(product, storageBoxId)) {
+            showMessageBox("Product Creation", "Product can't be added");
+            return false;
+        }
+    }
+    else if (wardrobeId == "war3") {
+        if (!m_freeWardrobe->addProduct(product, storageBoxId)) {
+            showMessageBox("Product Creation", "Product can't be added");
+            return false;
+        }
+    }*/
+
+    return true;
+}
+
+void MainWindow::showMessageBox(const std::string& title, std::string text) {
+    QMessageBox msgBox;
+    msgBox.setWindowTitle(QString::fromStdString(title));
+    msgBox.setText(QString::fromStdString(text));
+    msgBox.exec();
 }

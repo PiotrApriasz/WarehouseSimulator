@@ -17,7 +17,7 @@ public:
     std::string getStorageBoxId();
 
 private:
-    Product *m_product;
+    Product *m_product = nullptr;
     Sizes m_size;
     std::string m_storageBoxId;
 };

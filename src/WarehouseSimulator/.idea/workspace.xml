@@ -20,12 +20,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a74c1f42-b68f-45ac-9791-83ba443f3396" name="Changes" comment="Implement taking of product from wardrobe and shipment">
+    <list default="true" id="a74c1f42-b68f-45ac-9791-83ba443f3396" name="Changes" comment="Implement storagebox class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/businessLogic/storagebox.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/storagebox.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/businessLogic/storagebox.h" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/storagebox.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/businessLogic/wardrobe.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/wardrobe.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/businessLogic/wardrobe.h" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/wardrobe.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qtWidgetUI/mainwindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/mainwindow.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qtWidgetUI/mainwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/mainwindow.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/qtWidgetUI/mainwindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/mainwindow.ui" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,6 +103,8 @@
       <workItem from="1679742724521" duration="28101000" />
       <workItem from="1680115558938" duration="22026000" />
       <workItem from="1680360195023" duration="1874000" />
+      <workItem from="1680853908620" duration="632000" />
+      <workItem from="1680858255595" duration="11126000" />
     </task>
     <task id="LOCAL-00001" summary="Add product creator dialog">
       <created>1679424798588</created>
@@ -165,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680393763925</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Implement storagebox class">
+      <created>1680565032085</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1680565032085</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,7 +203,19 @@
     <MESSAGE value="Add product images" />
     <MESSAGE value="Implement getting image path method" />
     <MESSAGE value="Implement taking of product from wardrobe and shipment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement taking of product from wardrobe and shipment" />
+    <MESSAGE value="Implement storagebox class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement storagebox class" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/businessLogic/storagebox.cpp</url>
+          <line>13</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -15,6 +15,7 @@ bool StorageBox::setProduct(Product *product) {
         return false;
 
     m_product = product;
+    return true;
 }
 
 Product *StorageBox::getProduct() {

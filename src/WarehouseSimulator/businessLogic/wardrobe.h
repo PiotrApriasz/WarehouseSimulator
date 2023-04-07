@@ -14,36 +14,36 @@
 
 template <AccessPolicies AccessPolicyType> class Wardrobe {
 public:
-    Wardrobe(std::vector<std::vector<StorageBox>> shelves, std::string wardeobeId);
+    Wardrobe(std::vector<StorageBox> *shelves, std::string wardrobeId);
     bool addProduct(Product product, std::string storageBoxId);
     bool removerProduct(std::string storageBoxId);
 
 private:
-    std::vector<std::vector<StorageBox>> m_shelves;
+    std::vector<StorageBox> *m_shelves;
     std::string m_wardrobeId;
     std::vector<Product> m_products;
 };
 
 template <> class Wardrobe<AccessPolicies::FIFO> {
 public:
-    Wardrobe(std::vector<std::vector<StorageBox>> shelves, std::string wardeobeId);
-    bool addProduct(Product product, std::string storageBoxId);
+    Wardrobe(std::vector<StorageBox> shelves, std::string wardrobeId);
+    bool addProduct(Product *product, std::string storageBoxId);
     bool removerProduct(std::string storageBoxId);
 
 private:
-    std::vector<std::vector<StorageBox>> m_shelves;
+    std::vector<StorageBox> m_shelves;
     std::string m_wardrobeId;
     std::queue<Product> m_products;
 };
 
 template <> class Wardrobe<AccessPolicies::LIFO> {
 public:
-    Wardrobe(std::vector<std::vector<StorageBox>> shelves, std::string wardeobeId);
+    Wardrobe(std::vector<StorageBox> *shelves, std::string wardrobeId);
     bool addProduct(Product product, std::string storageBoxId);
     bool removerProduct(std::string storageBoxId);
 
 private:
-    std::vector<std::vector<StorageBox>> m_shelves;
+    std::vector<StorageBox> *m_shelves;
     std::string m_wardrobeId;
     std::stack<Product> m_products;
 };
