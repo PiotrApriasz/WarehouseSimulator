@@ -63,34 +63,53 @@ void MainWindow::addNewProduct(QWidget *widget) {
 void MainWindow::moveProductToWardrobe(QWidget *widget) {
     qDebug() << "Widget was clicked: " << widget->objectName();
 
-    if (widget->layout() != nullptr) {
-        delete widget->layout();
-    }
-
     auto wardrobeChildWidget = widget->findChild<QWidget*>("Product");
-    auto childWidget = ui->factoryGB->findChild<QWidget*>("Product");
-    auto productWidget = dynamic_cast<ProductWidget*>(childWidget);
 
-    if (wardrobeChildWidget == nullptr && childWidget != nullptr) {
-
-        if (!m_fifoWardrobe->addProduct(productWidget->getProduct(), widget->objectName().toStdString())) {
-            QMessageBox msgBox;
-            msgBox.setWindowTitle("Product Creation");
-            msgBox.setText("Product can't be added!");
-            msgBox.exec();
-
-            return;
+    if (wardrobeChildWidget == nullptr) {
+        if (widget->layout() != nullptr) {
+            delete widget->layout();
         }
 
-        QLayout* groupBoxLayout = ui->factoryGB->layout();
-        groupBoxLayout->removeWidget(childWidget);
-        childWidget->setParent(nullptr);
-        ui->factoryGB->setLayout(groupBoxLayout);
+        auto childWidget = ui->factoryGB->findChild<QWidget*>("Product");
+        auto productWidget = dynamic_cast<ProductWidget*>(childWidget);
 
-        auto* frameLayout = new QVBoxLayout(widget);
-        frameLayout->addWidget(childWidget, 0, Qt::AlignCenter);
+        if (childWidget != nullptr) {
 
-        widget->setLayout(frameLayout);
+            if (!addProductToStorageBox(productWidget->getProduct(), widget->objectName().toStdString()))
+                return;
+
+            QLayout* groupBoxLayout = ui->factoryGB->layout();
+            groupBoxLayout->removeWidget(childWidget);
+            childWidget->setParent(nullptr);
+            ui->factoryGB->setLayout(groupBoxLayout);
+
+            auto* frameLayout = new QVBoxLayout(widget);
+            frameLayout->addWidget(childWidget, 0, Qt::AlignCenter);
+
+            widget->setLayout(frameLayout);
+
+            childWidget->installEventFilter(this);
+        }
+    }
+    else {
+        if (ui->shipmentGB->layout() == nullptr) {
+
+            auto productWidget = dynamic_cast<ProductWidget*>(wardrobeChildWidget);
+
+            if (!deleteProductFromStorageBox(productWidget->getProduct(), widget->objectName().toStdString()))
+                return;
+
+            QLayout *storageBoxLayout = widget->layout();
+            storageBoxLayout->removeWidget(wardrobeChildWidget);
+            wardrobeChildWidget->setParent(nullptr);
+            widget->setLayout(storageBoxLayout);
+
+            auto *layout = new QVBoxLayout(ui->shipmentGB);
+            layout->addWidget(wardrobeChildWidget, 0, Qt::AlignCenter);
+            ui->shipmentGB->setLayout(layout);
+
+            ui->sendBtn->setVisible(true);
+        }
     }
 }
 
@@ -105,15 +124,72 @@ void MainWindow::onSendBtnClick() {
     ui->sendBtn->setVisible(false);
 }
 
+bool MainWindow::addProductToStorageBox(Product *product, const std::string& storageBoxId) {
+    auto wardrobeId = storageBoxId.substr(0, 4);
+
+    if (wardrobeId == "war1") {
+        if (!m_fifoWardrobe->addProduct(product, storageBoxId)) {
+            showMessageBox("Product Creation", "Product can't be added");
+            return false;
+        }
+    }
+    /*else if (wardrobeId == "war2") {
+        if (!m_lifoWardrobe->addProduct(product, storageBoxId)) {
+            showMessageBox("Product Creation", "Product can't be added");
+            return false;
+        }
+    }
+    else if (wardrobeId == "war3") {
+        if (!m_freeWardrobe->addProduct(product, storageBoxId)) {
+            showMessageBox("Product Creation", "Product can't be added");
+            return false;
+        }
+    }*/
+
+    return true;
+}
+
+bool MainWindow::deleteProductFromStorageBox(Product *product, const std::string& storageBoxId) {
+    auto wardrobeId = storageBoxId.substr(0, 4);
+
+    if (wardrobeId == "war1") {
+        if (!m_fifoWardrobe->removeProduct(product)) {
+            showMessageBox("Product Removal", "This product can't be removed right now. Try another one");
+            return false;
+        }
+    }
+    /*else if (wardrobeId == "war2") {
+        if (!m_lifoWardrobe->addProduct(product, storageBoxId)) {
+            showMessageBox("Product Creation", "Product can't be added");
+            return false;
+        }
+    }
+    else if (wardrobeId == "war3") {
+        if (!m_freeWardrobe->addProduct(product, storageBoxId)) {
+            showMessageBox("Product Creation", "Product can't be added");
+            return false;
+        }
+    }*/
+
+    return true;
+}
+
+void MainWindow::showMessageBox(const std::string& title, std::string text) {
+    QMessageBox msgBox;
+    msgBox.setWindowTitle(QString::fromStdString(title));
+    msgBox.setText(QString::fromStdString(text));
+    msgBox.exec();
+}
+
 void MainWindow::initializeWardrobes() {
     std::vector<StorageBox> wardrobe1StorageBoxes =  {
-                StorageBox(Sizes::Medium, "war1fr1"),
-                StorageBox(Sizes::Medium, "war1fr2"),
-                StorageBox(Sizes::Big, "war1fr3"),
-                StorageBox(Sizes::Small, "war1fr4"),
-                StorageBox(Sizes::Small, "war1fr5"),
-                StorageBox(Sizes::Small, "war1fr6"),
-                StorageBox(Sizes::Big, "war1fr7"),
+            StorageBox(Sizes::Medium, "war1fr1"),
+            StorageBox(Sizes::Medium, "war1fr2"),
+            StorageBox(Sizes::Big, "war1fr3"),
+            StorageBox(Sizes::Small, "war1fr4"),
+            StorageBox(Sizes::Small, "war1fr5"),
+            StorageBox(Sizes::Small, "war1fr6"),
+            StorageBox(Sizes::Big, "war1fr7"),
     };
 
     m_fifoWardrobe = new Wardrobe<AccessPolicies::FIFO>(wardrobe1StorageBoxes, "war1");
@@ -161,36 +237,4 @@ void MainWindow::initializeWardrobe1ClickHandlers() {
 
     connect(clickHandler_w1fr7, &ClickHandler::clicked, this,
             &MainWindow::moveProductToWardrobe);
-}
-
-bool MainWindow::addProductToStorageBox(Product *product, std::string storageBoxId) {
-    auto wardrobeId = storageBoxId.substr(0, 4);
-
-    if (wardrobeId == "war1") {
-        if (!m_fifoWardrobe->addProduct(product, storageBoxId)) {
-            showMessageBox("Product Creation", "Product can't be added");
-            return false;
-        }
-    }
-    /*else if (wardrobeId == "war2") {
-        if (!m_lifoWardrobe->addProduct(product, storageBoxId)) {
-            showMessageBox("Product Creation", "Product can't be added");
-            return false;
-        }
-    }
-    else if (wardrobeId == "war3") {
-        if (!m_freeWardrobe->addProduct(product, storageBoxId)) {
-            showMessageBox("Product Creation", "Product can't be added");
-            return false;
-        }
-    }*/
-
-    return true;
-}
-
-void MainWindow::showMessageBox(const std::string& title, std::string text) {
-    QMessageBox msgBox;
-    msgBox.setWindowTitle(QString::fromStdString(title));
-    msgBox.setText(QString::fromStdString(text));
-    msgBox.exec();
 }

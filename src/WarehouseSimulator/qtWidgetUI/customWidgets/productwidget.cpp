@@ -19,27 +19,6 @@ ProductWidget::ProductWidget(QWidget *parent, Product *product)
     createWidget();
 }
 
-void ProductWidget::mousePressEvent(QMouseEvent* event) {
-    qDebug() << "Widget was clicked: " << this->objectName();
-    auto storageBox = static_cast<QWidget*>(parent());
-    auto shipmentGB = parent()->parent()->findChild<QGroupBox*>("shipmentGB");
-
-    if (shipmentGB->layout() == nullptr) {
-        QLayout* storageBoxLayout = storageBox->layout();
-        storageBoxLayout->removeWidget(this);
-        this->setParent(nullptr);
-        storageBox->setLayout(storageBoxLayout);
-
-        auto *layout = new QVBoxLayout(shipmentGB);
-        layout->addWidget(this, 0, Qt::AlignCenter);
-        shipmentGB->setLayout(layout);
-
-        parent()->parent()->findChild<QPushButton*>("sendBtn")->setVisible(true);
-
-        QWidget::mousePressEvent(event);
-    }
-}
-
 void ProductWidget::createWidget() {
     switch (m_product->getSize()) {
         case Sizes::Small : {

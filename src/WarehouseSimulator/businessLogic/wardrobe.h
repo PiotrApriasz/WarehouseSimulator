@@ -28,12 +28,12 @@ template <> class Wardrobe<AccessPolicies::FIFO> {
 public:
     Wardrobe(std::vector<StorageBox> shelves, std::string wardrobeId);
     bool addProduct(Product *product, std::string storageBoxId);
-    bool removerProduct(std::string storageBoxId);
+    bool removeProduct(Product *product);
 
 private:
     std::vector<StorageBox> m_shelves;
     std::string m_wardrobeId;
-    std::queue<Product> m_products;
+    std::queue<Product*> m_products;
 };
 
 template <> class Wardrobe<AccessPolicies::LIFO> {

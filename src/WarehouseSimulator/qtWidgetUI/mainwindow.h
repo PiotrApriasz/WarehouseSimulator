@@ -37,7 +37,8 @@ private:
     void initializeWardrobe1ClickHandlers();
 
 
-    bool addProductToStorageBox(Product *product, std::string storageBoxId);
+    bool addProductToStorageBox(Product *product, const std::string& storageBoxId);
+    bool deleteProductFromStorageBox(Product *product, const std::string& storageBoxId);
     void showMessageBox(const std::string& title, std::string  text);
 
 private slots:

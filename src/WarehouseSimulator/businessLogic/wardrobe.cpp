@@ -44,11 +44,17 @@ bool Wardrobe<AccessPolicies::FIFO>::addProduct(Product *product, std::string st
     if (!m_shelves[id - 1].setProduct(product))
          return false;
 
+    m_products.push(product);
+
     return true;
 }
 
-bool Wardrobe<AccessPolicies::FIFO>::removerProduct(std::string storageBoxId) {
-
+bool Wardrobe<AccessPolicies::FIFO>::removeProduct(Product *product) {
+    if (m_products.front() == product) {
+        m_products.pop();
+        return true;
+    }
+    return false;
 }
 
 Wardrobe<AccessPolicies::LIFO>::Wardrobe(std::vector<StorageBox> *shelves, std::string wardrobeId) :

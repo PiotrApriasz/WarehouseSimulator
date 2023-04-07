@@ -16,8 +16,6 @@ public:
 
 private:
     Product *m_product;
-
-    void mousePressEvent(QMouseEvent* event) override;
     void createWidget();
 
 };
