@@ -13,15 +13,18 @@
 #include "StorageBox.h"
 
 template <AccessPolicies AccessPolicyType> class Wardrobe {
+};
+
+template <> class Wardrobe<AccessPolicies::Free> {
 public:
-    Wardrobe(std::vector<StorageBox> *shelves, std::string wardrobeId);
-    bool addProduct(Product product, std::string storageBoxId);
-    bool removerProduct(std::string storageBoxId);
+    Wardrobe(std::vector<StorageBox> shelves, std::string wardrobeId);
+    bool addProduct(Product *product, std::string storageBoxId);
+    bool removeProduct(Product *product);
 
 private:
-    std::vector<StorageBox> *m_shelves;
+    std::vector<StorageBox> m_shelves;
     std::string m_wardrobeId;
-    std::vector<Product> m_products;
+    std::queue<Product*> m_products;
 };
 
 template <> class Wardrobe<AccessPolicies::FIFO> {
@@ -38,12 +41,12 @@ private:
 
 template <> class Wardrobe<AccessPolicies::LIFO> {
 public:
-    Wardrobe(std::vector<StorageBox> *shelves, std::string wardrobeId);
+    Wardrobe(std::vector<StorageBox> shelves, std::string wardrobeId);
     bool addProduct(Product product, std::string storageBoxId);
     bool removerProduct(std::string storageBoxId);
 
 private:
-    std::vector<StorageBox> *m_shelves;
+    std::vector<StorageBox> m_shelves;
     std::string m_wardrobeId;
     std::stack<Product> m_products;
 };

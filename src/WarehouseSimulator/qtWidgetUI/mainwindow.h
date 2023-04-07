@@ -35,6 +35,8 @@ private:
 
     void initializeWardrobes();
     void initializeWardrobe1ClickHandlers();
+    void initializeWardrobe2ClickHandlers();
+    void initializeWardrobe3ClickHandlers();
 
 
     bool addProductToStorageBox(Product *product, const std::string& storageBoxId);

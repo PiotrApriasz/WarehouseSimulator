@@ -216,7 +216,7 @@
      <enum>QFrame::Plain</enum>
     </property>
    </widget>
-   <widget class="QFrame" name="frame_7">
+   <widget class="QFrame" name="war2fr2">
     <property name="geometry">
      <rect>
       <x>370</x>
@@ -232,7 +232,7 @@
      <enum>QFrame::Plain</enum>
     </property>
    </widget>
-   <widget class="QFrame" name="frame_8">
+   <widget class="QFrame" name="war2fr1">
     <property name="geometry">
      <rect>
       <x>370</x>
@@ -248,7 +248,7 @@
      <enum>QFrame::Plain</enum>
     </property>
    </widget>
-   <widget class="QFrame" name="frame_9">
+   <widget class="QFrame" name="war2fr3">
     <property name="geometry">
      <rect>
       <x>370</x>
@@ -264,7 +264,7 @@
      <enum>QFrame::Plain</enum>
     </property>
    </widget>
-   <widget class="QFrame" name="frame_10">
+   <widget class="QFrame" name="war2fr5">
     <property name="geometry">
      <rect>
       <x>370</x>
@@ -280,7 +280,7 @@
      <enum>QFrame::Plain</enum>
     </property>
    </widget>
-   <widget class="QFrame" name="frame_14">
+   <widget class="QFrame" name="war3fr6">
     <property name="geometry">
      <rect>
       <x>720</x>
@@ -296,7 +296,7 @@
      <enum>QFrame::Plain</enum>
     </property>
    </widget>
-   <widget class="QFrame" name="frame_12">
+   <widget class="QFrame" name="war3fr1">
     <property name="geometry">
      <rect>
       <x>720</x>
@@ -312,7 +312,7 @@
      <enum>QFrame::Plain</enum>
     </property>
    </widget>
-   <widget class="QFrame" name="frame_11">
+   <widget class="QFrame" name="war3fr4">
     <property name="geometry">
      <rect>
       <x>720</x>
@@ -328,7 +328,7 @@
      <enum>QFrame::Plain</enum>
     </property>
    </widget>
-   <widget class="QFrame" name="frame_13">
+   <widget class="QFrame" name="war3fr5">
     <property name="geometry">
      <rect>
       <x>720</x>
@@ -392,7 +392,7 @@
      <enum>QFrame::Plain</enum>
     </property>
    </widget>
-   <widget class="QFrame" name="frame_17">
+   <widget class="QFrame" name="war2fr6">
     <property name="geometry">
      <rect>
       <x>520</x>
@@ -408,7 +408,7 @@
      <enum>QFrame::Plain</enum>
     </property>
    </widget>
-   <widget class="QFrame" name="frame_18">
+   <widget class="QFrame" name="war2fr4">
     <property name="geometry">
      <rect>
       <x>520</x>
@@ -424,7 +424,7 @@
      <enum>QFrame::Plain</enum>
     </property>
    </widget>
-   <widget class="QFrame" name="frame_19">
+   <widget class="QFrame" name="war3fr2">
     <property name="geometry">
      <rect>
       <x>820</x>
@@ -440,7 +440,7 @@
      <enum>QFrame::Plain</enum>
     </property>
    </widget>
-   <widget class="QFrame" name="frame_20">
+   <widget class="QFrame" name="war3fr3">
     <property name="geometry">
      <rect>
       <x>920</x>
