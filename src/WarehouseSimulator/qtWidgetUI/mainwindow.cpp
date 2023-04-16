@@ -62,7 +62,7 @@ void MainWindow::addNewProduct(QWidget *widget) {
     ui->factoryGB->setLayout(layout);
 }
 
-void MainWindow::moveProductToWardrobe(QWidget *widget) {
+void MainWindow::moveProduct(QWidget *widget) {
     qDebug() << "Widget was clicked: " << widget->objectName();
 
     auto wardrobeChildWidget = widget->findChild<QWidget*>("Product");
@@ -135,7 +135,7 @@ bool MainWindow::addProductToStorageBox(Product *product, const std::string& sto
             return false;
         }
     }
-    /*else if (wardrobeId == "war2") {
+    else if (wardrobeId == "war2") {
         if (!m_lifoWardrobe->addProduct(product, storageBoxId)) {
             showMessageBox("Product Creation", "Product can't be added");
             return false;
@@ -146,7 +146,7 @@ bool MainWindow::addProductToStorageBox(Product *product, const std::string& sto
             showMessageBox("Product Creation", "Product can't be added");
             return false;
         }
-    }*/
+    }
 
     return true;
 }
@@ -155,23 +155,23 @@ bool MainWindow::deleteProductFromStorageBox(Product *product, const std::string
     auto wardrobeId = storageBoxId.substr(0, 4);
 
     if (wardrobeId == "war1") {
-        if (!m_fifoWardrobe->removeProduct(product)) {
+        if (!m_fifoWardrobe->removeProduct(product, storageBoxId)) {
             showMessageBox("Product Removal", "This product can't be removed right now. Try another one");
             return false;
         }
     }
-    /*else if (wardrobeId == "war2") {
-        if (!m_lifoWardrobe->addProduct(product, storageBoxId)) {
-            showMessageBox("Product Creation", "Product can't be added");
+    else if (wardrobeId == "war2") {
+        if (!m_lifoWardrobe->removeProduct(product, storageBoxId)) {
+            showMessageBox("Product Creation", "This product can't be removed right now. Try another one");
             return false;
         }
     }
     else if (wardrobeId == "war3") {
-        if (!m_freeWardrobe->addProduct(product, storageBoxId)) {
-            showMessageBox("Product Creation", "Product can't be added");
+        if (!m_freeWardrobe->removeProduct(product, storageBoxId)) {
+            showMessageBox("Product Removal", "This product can't be removed right now. Try another one");
             return false;
         }
-    }*/
+    }
 
     return true;
 }
@@ -222,43 +222,43 @@ void MainWindow::initializeWardrobe1ClickHandlers() {
     ui->war1fr1->installEventFilter(clickHandler_w1fr1);
 
     connect(clickHandler_w1fr1, &ClickHandler::clicked, this,
-            &MainWindow::moveProductToWardrobe);
+            &MainWindow::moveProduct);
 
     auto clickHandler_w1fr2 = new ClickHandler(ui->war1fr2);
     ui->war1fr2->installEventFilter(clickHandler_w1fr2);
 
     connect(clickHandler_w1fr2, &ClickHandler::clicked, this,
-            &MainWindow::moveProductToWardrobe);
+            &MainWindow::moveProduct);
 
     auto clickHandler_w1fr3 = new ClickHandler(ui->war1fr3);
     ui->war1fr3->installEventFilter(clickHandler_w1fr3);
 
     connect(clickHandler_w1fr3, &ClickHandler::clicked, this,
-            &MainWindow::moveProductToWardrobe);
+            &MainWindow::moveProduct);
 
     auto clickHandler_w1fr4 = new ClickHandler(ui->war1fr4);
     ui->war1fr4->installEventFilter(clickHandler_w1fr4);
 
     connect(clickHandler_w1fr4, &ClickHandler::clicked, this,
-            &MainWindow::moveProductToWardrobe);
+            &MainWindow::moveProduct);
 
     auto clickHandler_w1fr5 = new ClickHandler(ui->war1fr5);
     ui->war1fr5->installEventFilter(clickHandler_w1fr5);
 
     connect(clickHandler_w1fr5, &ClickHandler::clicked, this,
-            &MainWindow::moveProductToWardrobe);
+            &MainWindow::moveProduct);
 
     auto clickHandler_w1fr6 = new ClickHandler(ui->war1fr6);
     ui->war1fr6->installEventFilter(clickHandler_w1fr6);
 
     connect(clickHandler_w1fr6, &ClickHandler::clicked, this,
-            &MainWindow::moveProductToWardrobe);
+            &MainWindow::moveProduct);
 
     auto clickHandler_w1fr7 = new ClickHandler(ui->war1fr7);
     ui->war1fr7->installEventFilter(clickHandler_w1fr7);
 
     connect(clickHandler_w1fr7, &ClickHandler::clicked, this,
-            &MainWindow::moveProductToWardrobe);
+            &MainWindow::moveProduct);
 }
 
 void MainWindow::initializeWardrobe2ClickHandlers() {
@@ -266,37 +266,37 @@ void MainWindow::initializeWardrobe2ClickHandlers() {
     ui->war2fr1->installEventFilter(clickHandler_w2fr1);
 
     connect(clickHandler_w2fr1, &ClickHandler::clicked, this,
-            &MainWindow::moveProductToWardrobe);
+            &MainWindow::moveProduct);
 
     auto clickHandler_w2fr2 = new ClickHandler(ui->war2fr2);
     ui->war2fr2->installEventFilter(clickHandler_w2fr2);
 
     connect(clickHandler_w2fr2, &ClickHandler::clicked, this,
-            &MainWindow::moveProductToWardrobe);
+            &MainWindow::moveProduct);
 
     auto clickHandler_w2fr3 = new ClickHandler(ui->war2fr3);
     ui->war2fr3->installEventFilter(clickHandler_w2fr3);
 
     connect(clickHandler_w2fr3, &ClickHandler::clicked, this,
-            &MainWindow::moveProductToWardrobe);
+            &MainWindow::moveProduct);
 
     auto clickHandler_w2fr4 = new ClickHandler(ui->war2fr4);
     ui->war2fr4->installEventFilter(clickHandler_w2fr4);
 
     connect(clickHandler_w2fr4, &ClickHandler::clicked, this,
-            &MainWindow::moveProductToWardrobe);
+            &MainWindow::moveProduct);
 
     auto clickHandler_w2fr5 = new ClickHandler(ui->war2fr5);
     ui->war2fr5->installEventFilter(clickHandler_w2fr5);
 
     connect(clickHandler_w2fr5, &ClickHandler::clicked, this,
-            &MainWindow::moveProductToWardrobe);
+            &MainWindow::moveProduct);
 
     auto clickHandler_w2fr6 = new ClickHandler(ui->war2fr6);
     ui->war2fr6->installEventFilter(clickHandler_w2fr6);
 
     connect(clickHandler_w2fr6, &ClickHandler::clicked, this,
-            &MainWindow::moveProductToWardrobe);
+            &MainWindow::moveProduct);
 }
 
 void MainWindow::initializeWardrobe3ClickHandlers() {
@@ -304,35 +304,35 @@ void MainWindow::initializeWardrobe3ClickHandlers() {
     ui->war3fr1->installEventFilter(clickHandler_w3fr1);
 
     connect(clickHandler_w3fr1, &ClickHandler::clicked, this,
-            &MainWindow::moveProductToWardrobe);
+            &MainWindow::moveProduct);
 
     auto clickHandler_w3fr2 = new ClickHandler(ui->war3fr2);
     ui->war3fr2->installEventFilter(clickHandler_w3fr2);
 
     connect(clickHandler_w3fr2, &ClickHandler::clicked, this,
-            &MainWindow::moveProductToWardrobe);
+            &MainWindow::moveProduct);
 
     auto clickHandler_w3fr3 = new ClickHandler(ui->war3fr3);
     ui->war3fr3->installEventFilter(clickHandler_w3fr3);
 
     connect(clickHandler_w3fr3, &ClickHandler::clicked, this,
-            &MainWindow::moveProductToWardrobe);
+            &MainWindow::moveProduct);
 
     auto clickHandler_w3fr4 = new ClickHandler(ui->war3fr4);
     ui->war3fr4->installEventFilter(clickHandler_w3fr4);
 
     connect(clickHandler_w3fr4, &ClickHandler::clicked, this,
-            &MainWindow::moveProductToWardrobe);
+            &MainWindow::moveProduct);
 
     auto clickHandler_w3fr5 = new ClickHandler(ui->war3fr5);
     ui->war3fr5->installEventFilter(clickHandler_w3fr5);
 
     connect(clickHandler_w3fr5, &ClickHandler::clicked, this,
-            &MainWindow::moveProductToWardrobe);
+            &MainWindow::moveProduct);
 
     auto clickHandler_w3fr6 = new ClickHandler(ui->war3fr6);
     ui->war3fr6->installEventFilter(clickHandler_w3fr6);
 
     connect(clickHandler_w3fr6, &ClickHandler::clicked, this,
-            &MainWindow::moveProductToWardrobe);
+            &MainWindow::moveProduct);
 }

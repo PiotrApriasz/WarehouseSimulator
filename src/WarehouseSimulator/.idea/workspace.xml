@@ -20,13 +20,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a74c1f42-b68f-45ac-9791-83ba443f3396" name="Changes" comment="Implement product removal for FIFO">
+    <list default="true" id="a74c1f42-b68f-45ac-9791-83ba443f3396" name="Changes" comment="Initialize all wardrobes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessLogic/storagebox.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/storagebox.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/businessLogic/wardrobe.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/wardrobe.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/businessLogic/wardrobe.h" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/wardrobe.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/qtWidgetUI/mainwindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/mainwindow.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/qtWidgetUI/mainwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/mainwindow.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qtWidgetUI/mainwindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/mainwindow.ui" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +69,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CPPToolchains&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -102,7 +102,10 @@
       <workItem from="1680115558938" duration="22026000" />
       <workItem from="1680360195023" duration="1874000" />
       <workItem from="1680853908620" duration="632000" />
-      <workItem from="1680858255595" duration="24611000" />
+      <workItem from="1680858255595" duration="28758000" />
+      <workItem from="1680993610986" duration="730000" />
+      <workItem from="1681250993358" duration="5241000" />
+      <workItem from="1681680430621" duration="2015000" />
     </task>
     <task id="LOCAL-00001" summary="Add product creator dialog">
       <created>1679424798588</created>
@@ -195,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680880710103</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Initialize all wardrobes">
+      <created>1680907077601</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1680907077601</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,18 +236,8 @@
     <MESSAGE value="Implement adding product to whole wardrobe 1 with usage of businnes logic" />
     <MESSAGE value="Add size restriction while adding to storage box" />
     <MESSAGE value="Implement product removal for FIFO" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement product removal for FIFO" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/qtWidgetUI/mainwindow.cpp</url>
-          <line>96</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Initialize all wardrobes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initialize all wardrobes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

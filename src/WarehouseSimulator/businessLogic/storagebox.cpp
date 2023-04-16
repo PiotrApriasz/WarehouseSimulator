@@ -11,11 +11,13 @@ StorageBox::StorageBox(Sizes size, std::string storageBoxId) :
 }
 
 bool StorageBox::setProduct(Product *product) {
-    if (m_product != nullptr)
-        return false;
+    if (product != nullptr) {
+        if (m_product != nullptr)
+            return false;
 
-    if (product->getSize() != m_size)
-        return false;
+        if (product->getSize() != m_size)
+            return false;
+    }
 
     m_product = product;
     return true;
