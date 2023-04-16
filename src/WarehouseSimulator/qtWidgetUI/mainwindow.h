@@ -10,7 +10,9 @@
 #include "../businessLogic/enums/sizes.h"
 #include "productcreator.h"
 #include "events/clickhandler.h"
-#include "../businessLogic/wardrobe.h"
+#include "../businessLogic/warehouse/wardrobe.h"
+#include "../businessLogic/warehouse/fifowardrobe.h"
+#include "../businessLogic/warehouse/lifowardrobe.h"
 
 
 QT_BEGIN_NAMESPACE

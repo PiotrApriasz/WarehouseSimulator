@@ -2,7 +2,7 @@
 // Created by piotr on 29.03.2023.
 //
 
-#include "StorageBox.h"
+#include "storagebox.h"
 
 StorageBox::StorageBox(Sizes size, std::string storageBoxId) :
     m_size(std::move(size)),

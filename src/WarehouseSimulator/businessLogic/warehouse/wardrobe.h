@@ -1,19 +1,16 @@
-//
-// Created by piotr on 26.03.2023.
-//
-
-#ifndef WAREHOUSESIMULATOR_WARDROBE_H
-#define WAREHOUSESIMULATOR_WARDROBE_H
-
+#pragma once
 
 #include <vector>
 #include <queue>
 #include <stack>
-#include "enums/accesspolicies.h"
-#include "StorageBox.h"
+#include <algorithm>
+#include <string>
 
-template <AccessPolicies AccessPolicyType> class Wardrobe {
+#include "../enums/accesspolicies.h"
+#include "storagebox.h"
 
+template <AccessPolicies AccessPolicyType>
+class Wardrobe {
 public:
     explicit Wardrobe(std::vector<StorageBox> shelves, std::string wardrobeId);
     bool addProduct(Product *product, std::string storageBoxId);
@@ -27,7 +24,7 @@ private:
 
 template <AccessPolicies AccessPolicyType>
 Wardrobe<AccessPolicyType>::Wardrobe(std::vector<StorageBox> shelves, std::string wardrobeId) :
-        m_shelves(shelves),
+        m_shelves(std::move(shelves)),
         m_wardrobeId(std::move(wardrobeId))
 {}
 
@@ -62,30 +59,3 @@ bool Wardrobe<AccessPolicyType>::removeProduct(Product *product, std::string sto
 
     return true;
 }
-
-template <> class Wardrobe<AccessPolicies::FIFO> {
-public:
-    Wardrobe(std::vector<StorageBox> shelves, std::string wardrobeId);
-    bool addProduct(Product *product, std::string storageBoxId);
-    bool removeProduct(Product *product, std::string storageBoxId);
-
-private:
-    std::vector<StorageBox> m_shelves;
-    std::string m_wardrobeId;
-    std::queue<Product*> m_products;
-};
-
-template <> class Wardrobe<AccessPolicies::LIFO> {
-public:
-    Wardrobe(std::vector<StorageBox> shelves, std::string wardrobeId);
-    bool addProduct(Product *product, std::string storageBoxId);
-    bool removeProduct(Product *product, std::string storageBoxId);
-
-private:
-    std::vector<StorageBox> m_shelves;
-    std::string m_wardrobeId;
-    std::stack<Product> m_products;
-};
-
-
-#endif //WAREHOUSESIMULATOR_WARDROBE_H

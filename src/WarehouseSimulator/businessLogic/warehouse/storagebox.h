@@ -5,8 +5,8 @@
 #ifndef WAREHOUSESIMULATOR_STORAGEBOX_H
 #define WAREHOUSESIMULATOR_STORAGEBOX_H
 
-#include "Products/product.h"
-#include "enums/sizes.h"
+#include "../products/product.h"
+#include "../enums/sizes.h"
 
 class StorageBox {
 public:
