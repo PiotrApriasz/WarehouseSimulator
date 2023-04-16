@@ -2,8 +2,8 @@
 // Created by piotr on 29.03.2023.
 //
 
-#include "Keyboard.h"
-#include "enums/sizes.h"
+#include "keyboard.h"
+#include "../enums/sizes.h"
 #include <string>
 
 Keyboard::Keyboard(std::string name, std::string imagePath, Sizes size) :

@@ -20,13 +20,22 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a74c1f42-b68f-45ac-9791-83ba443f3396" name="Changes" comment="Initialize all wardrobes">
+    <list default="true" id="a74c1f42-b68f-45ac-9791-83ba443f3396" name="Changes" comment="Implement add and remove for remaining access policies">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/businessLogic/storagebox.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/storagebox.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/businessLogic/wardrobe.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/wardrobe.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/businessLogic/wardrobe.h" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/wardrobe.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qtWidgetUI/mainwindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/mainwindow.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qtWidgetUI/mainwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/mainwindow.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessLogic/gamepad.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/products/gamepad.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessLogic/gamepad.h" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/Products/gamepad.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessLogic/gamingconsole.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/Products/gamingconsole.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessLogic/gamingconsole.h" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/Products/gamingconsole.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessLogic/keyboard.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/products/keyboard.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessLogic/keyboard.h" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/products/keyboard.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessLogic/product.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/products/product.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessLogic/product.h" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/Products/product.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessLogic/storagebox.h" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/storagebox.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessLogic/tv.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/Products/tv.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/businessLogic/tv.h" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/Products/tv.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qtWidgetUI/customWidgets/productwidget.h" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/customWidgets/productwidget.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qtWidgetUI/productcreator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/productcreator.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,10 +84,16 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\University\PW\PS1\ZCPP\ObjectiveStorageModel\src\WarehouseSimulator\businessLogic\Products" />
       <recent name="F:\University\PW\PS1\ZCPP\ObjectiveStorageModel\src\WarehouseSimulator\businessLogic\enums" />
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WarehouseSimulator" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="WarehouseSimulator" TARGET_NAME="WarehouseSimulator" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="WarehouseSimulator" RUN_TARGET_NAME="WarehouseSimulator">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -105,7 +120,7 @@
       <workItem from="1680858255595" duration="28758000" />
       <workItem from="1680993610986" duration="730000" />
       <workItem from="1681250993358" duration="5241000" />
-      <workItem from="1681680430621" duration="2015000" />
+      <workItem from="1681680430621" duration="2328000" />
     </task>
     <task id="LOCAL-00001" summary="Add product creator dialog">
       <created>1679424798588</created>
@@ -205,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680907077601</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Implement add and remove for remaining access policies">
+      <created>1681682924800</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1681682924800</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,7 +259,8 @@
     <MESSAGE value="Add size restriction while adding to storage box" />
     <MESSAGE value="Implement product removal for FIFO" />
     <MESSAGE value="Initialize all wardrobes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initialize all wardrobes" />
+    <MESSAGE value="Implement add and remove for remaining access policies" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement add and remove for remaining access policies" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

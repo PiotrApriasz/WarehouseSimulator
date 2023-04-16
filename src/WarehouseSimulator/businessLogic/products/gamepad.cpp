@@ -3,8 +3,8 @@
 //
 
 #include <string>
-#include "Gamepad.h"
-#include "enums/sizes.h"
+#include "gamepad.h"
+#include "../enums/sizes.h"
 
 Gamepad::Gamepad(std::string name, std::string imagePath, Sizes size) :
         Product(name, imagePath, size) {

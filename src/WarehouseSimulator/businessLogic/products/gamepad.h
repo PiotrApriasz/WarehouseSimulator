@@ -6,7 +6,7 @@
 #define WAREHOUSESIMULATOR_GAMEPAD_H
 
 #include "product.h"
-#include "enums/sizes.h"
+#include "../enums/sizes.h"
 
 class Gamepad : public Product {
 

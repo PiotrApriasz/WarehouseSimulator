@@ -7,7 +7,7 @@
 
 
 #include <string>
-#include "enums/sizes.h"
+#include "../enums/sizes.h"
 
 class Product {
 public:

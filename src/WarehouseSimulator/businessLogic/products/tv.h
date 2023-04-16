@@ -6,7 +6,7 @@
 #define WAREHOUSESIMULATOR_TV_H
 
 #include "product.h"
-#include "enums/sizes.h"
+#include "../enums/sizes.h"
 
 
 class TV : public Product {

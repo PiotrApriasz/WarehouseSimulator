@@ -7,7 +7,7 @@
 
 
 #include <QWidget>
-#include "../../businessLogic/product.h"
+#include "../../businessLogic/Products/product.h"
 
 class ProductWidget : public QWidget {
 public:

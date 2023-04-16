@@ -2,8 +2,8 @@
 // Created by piotr on 20.03.2023.
 //
 
-#include "Product.h"
-#include "enums/sizes.h"
+#include "product.h"
+#include "../enums/sizes.h"
 #include <string>
 
 Product::Product(std::string name, std::string imagePath, Sizes size) {

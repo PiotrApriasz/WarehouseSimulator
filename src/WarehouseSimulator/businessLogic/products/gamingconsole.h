@@ -6,7 +6,7 @@
 #define WAREHOUSESIMULATOR_GAMINGCONSOLE_H
 
 #include "product.h"
-#include "enums/sizes.h"
+#include "../enums/sizes.h"
 
 class GamingConsole : public Product {
 public:

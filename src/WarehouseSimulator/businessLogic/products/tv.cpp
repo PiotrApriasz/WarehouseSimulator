@@ -2,8 +2,8 @@
 // Created by piotr on 29.03.2023.
 //
 
-#include "TV.h"
-#include "enums/sizes.h"
+#include "tv.h"
+#include "../enums/sizes.h"
 #include <string>
 
 TV::TV(std::string name, std::string imagePath, Sizes size) :

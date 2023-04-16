@@ -6,7 +6,7 @@
 #define WAREHOUSESIMULATOR_KEYBOARD_H
 
 #include "product.h"
-#include "enums/sizes.h"
+#include "../enums/sizes.h"
 
 
 class Keyboard : public Product {

@@ -10,10 +10,10 @@
 #include "ui_ProductCreator.h"
 #include "../businessLogic/enums/products.h"
 #include "../businessLogic/helpers/imagehelper.h"
-#include "../businessLogic/gamingconsole.h"
-#include "../businessLogic/gamepad.h"
-#include "../businessLogic/tv.h"
-#include "../businessLogic/keyboard.h"
+#include "../businessLogic/Products/gamingconsole.h"
+#include "../businessLogic/Products/gamepad.h"
+#include "../businessLogic/Products/tv.h"
+#include "../businessLogic/Products/keyboard.h"
 
 
 ProductCreator::ProductCreator(QWidget *parent) :
