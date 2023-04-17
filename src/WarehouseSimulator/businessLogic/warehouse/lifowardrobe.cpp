@@ -22,13 +22,15 @@ bool Wardrobe<AccessPolicies::LIFO>::addProduct(Product *product, std::string st
     if (!m_shelves[id - 1].setProduct(product))
         return false;
 
-    m_products.push(*product);
+    m_products.push(product);
 
     return true;
 }
 
 bool Wardrobe<AccessPolicies::LIFO>::removeProduct(Product *product, std::string storageBoxId) {
-    if (&m_products.top() == product) {
+    auto test = m_products.top();
+
+    if (test == product) {
         m_products.pop();
 
         char last_char = storageBoxId.back();

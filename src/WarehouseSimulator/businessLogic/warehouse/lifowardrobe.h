@@ -19,6 +19,6 @@ public:
 private:
     std::vector<StorageBox> m_shelves;
     std::string m_wardrobeId;
-    std::stack<Product> m_products;
+    std::stack<Product*> m_products;
 };
 
