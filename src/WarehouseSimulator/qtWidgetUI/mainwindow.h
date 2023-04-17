@@ -43,7 +43,7 @@ private:
 
     bool addProductToStorageBox(Product *product, const std::string& storageBoxId);
     bool deleteProductFromStorageBox(Product *product, const std::string& storageBoxId);
-    void showMessageBox(const std::string& title, std::string  text);
+    static void showMessageBox(const std::string& title, const std::string&  text);
 
 private slots:
     void onCreateProductBtnClick();

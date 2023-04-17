@@ -20,10 +20,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a74c1f42-b68f-45ac-9791-83ba443f3396" name="Changes" comment="Split implementation of wardrobe specializations to different files">
+    <list default="true" id="a74c1f42-b68f-45ac-9791-83ba443f3396" name="Changes" comment="Fix error with stack push">
+      <change afterPath="$PROJECT_DIR$/businessLogic/products/productfactory.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/businessLogic/products/productfactory.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/businessLogic/warehouse/lifowardrobe.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/warehouse/lifowardrobe.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/businessLogic/warehouse/lifowardrobe.h" beforeDir="false" afterPath="$PROJECT_DIR$/businessLogic/warehouse/lifowardrobe.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qtWidgetUI/mainwindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/mainwindow.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qtWidgetUI/mainwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/mainwindow.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qtWidgetUI/productcreator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/qtWidgetUI/productcreator.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +113,7 @@
       <workItem from="1680858255595" duration="28758000" />
       <workItem from="1680993610986" duration="730000" />
       <workItem from="1681250993358" duration="5241000" />
-      <workItem from="1681680430621" duration="8657000" />
+      <workItem from="1681680430621" duration="10887000" />
     </task>
     <task id="LOCAL-00001" summary="Add product creator dialog">
       <created>1679424798588</created>
@@ -230,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681687413831</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Fix error with stack push">
+      <created>1681766244572</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1681766244572</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,7 +276,8 @@
     <MESSAGE value="Implement add and remove for remaining access policies" />
     <MESSAGE value="move product classes to separete directory" />
     <MESSAGE value="Split implementation of wardrobe specializations to different files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Split implementation of wardrobe specializations to different files" />
+    <MESSAGE value="Fix error with stack push" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix error with stack push" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

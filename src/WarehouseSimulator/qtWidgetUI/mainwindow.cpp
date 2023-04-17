@@ -176,7 +176,7 @@ bool MainWindow::deleteProductFromStorageBox(Product *product, const std::string
     return true;
 }
 
-void MainWindow::showMessageBox(const std::string& title, std::string text) {
+void MainWindow::showMessageBox(const std::string& title, const std::string& text) {
     QMessageBox msgBox;
     msgBox.setWindowTitle(QString::fromStdString(title));
     msgBox.setText(QString::fromStdString(text));
