@@ -9,7 +9,7 @@ enum class Products {
     GamingConsole = 0, GamePad = 1, TV = 2, Keyboard = 3
 };
 
-static const std::string ProductsStrings[] = { "GamingConsole", "GamePad", "TV", "Keyboard" };
+static const std::vector<std::string> ProductsStrings = { "GamingConsole", "GamePad", "TV", "Keyboard" };
 
 static const std::string getProductText( int enumVal )
 {

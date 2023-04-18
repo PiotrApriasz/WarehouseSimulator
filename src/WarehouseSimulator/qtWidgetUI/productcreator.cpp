@@ -11,13 +11,17 @@
 #include "../businessLogic/helpers/imagehelper.h"
 #include "../businessLogic/Products/productfactory.h"
 
+#include <QString>
+#include <algorithm>
+#include <vector>
+#include <QList>
 
 ProductCreator::ProductCreator(QWidget *parent) :
         QDialog(parent), ui(new Ui::ProductCreator) {
     ui->setupUi(this);
 
-    ui->productCB->addItems({"Gaming Console", "Game Pad", "TV", "Keyboard"});
-    ui->sizeCB->addItems({"Small", "Medium", "Big"});
+    ui->productCB->addItems(convertEnums(ProductsStrings));
+    ui->sizeCB->addItems(convertEnums(SizesStrings));
 
     connect(ui->cancelBtn, SIGNAL(clicked()), this,
             SLOT(onCancelBtnClick()));
@@ -45,5 +49,14 @@ void ProductCreator::onCreateBtnClick() {
     emit ProductCreator::productAdded(productWidget);
 
     this->close();
+}
+
+QList<QString> ProductCreator::convertEnums(std::vector<std::string> enumNames) {
+    return [&enumNames]() {
+        QList<QString> result;
+        std::transform(enumNames.cbegin(), enumNames.cend(), std::back_inserter(result),
+                       [](const std::string& str) { return QString::fromStdString(str); });
+        return result;
+    }();
 }
 

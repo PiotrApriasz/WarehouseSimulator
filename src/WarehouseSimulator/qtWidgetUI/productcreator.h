@@ -24,6 +24,7 @@ public:
 private:
     Ui::ProductCreator *ui;
     QWidget* m_mainWindow;
+    QList<QString> convertEnums(std::vector<std::string> enumNames);
 
 signals:
     ProductWidget* productAdded(ProductWidget *widget);
