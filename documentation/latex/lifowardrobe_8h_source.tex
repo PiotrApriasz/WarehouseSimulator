@@ -1,0 +1,32 @@
+\hypertarget{lifowardrobe_8h_source}{}\doxysection{lifowardrobe.\+h}
+\label{lifowardrobe_8h_source}\index{businessLogic/warehouse/lifowardrobe.h@{businessLogic/warehouse/lifowardrobe.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stack>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}../enums/accesspolicies.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}storagebox.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}wardrobe.h"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{template}\ <>\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_wardrobe}{Wardrobe}}<\mbox{\hyperlink{accesspolicies_8h_a8752a5f4be67e47bb68a38b91e61dbf0}{AccessPolicies}}::\mbox{\hyperlink{accesspolicies_8h_a8752a5f4be67e47bb68a38b91e61dbf0a249e6270d397378907bb92948fb14876}{LIFO}}>\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_wardrobe}{Wardrobe}}(std::vector<StorageBox>\ shelves,\ std::string\ wardrobeId);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_wardrobe_a9341627b8aa5e40c3dedfd5afc6bd745}{addProduct}}(\mbox{\hyperlink{class_product}{Product}}\ *product,\ std::string\ storageBoxId);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_wardrobe_a44ccc04f067acd3be605c88287c8b571}{removeProduct}}(\mbox{\hyperlink{class_product}{Product}}\ *product,\ std::string\ storageBoxId);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00037\ \ \ \ \ std::vector<StorageBox>\ m\_shelves;}
+\DoxyCodeLine{00038\ \ \ \ \ std::string\ m\_wardrobeId;}
+\DoxyCodeLine{00039\ \ \ \ \ std::stack<Product*>\ m\_products;}
+\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00041\ }
+
+\end{DoxyCode}

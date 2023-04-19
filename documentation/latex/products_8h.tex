@@ -1,0 +1,78 @@
+\hypertarget{products_8h}{}\doxysection{Dokumentacja pliku business\+Logic/enums/products.h}
+\label{products_8h}\index{businessLogic/enums/products.h@{businessLogic/enums/products.h}}
+\doxysubsection*{Wyliczenia}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{products_8h_a71bd54d332ca6237b3ef35cf84cd891b}{Products}} \{ \mbox{\hyperlink{products_8h_a71bd54d332ca6237b3ef35cf84cd891ba85c01b9ff9497498deda0c0846f6497d}{Gaming\+Console}} = 0
+, \mbox{\hyperlink{products_8h_a71bd54d332ca6237b3ef35cf84cd891babb8134cd77c31c188e34a0355f88bbc3}{Game\+Pad}} = 1
+, \mbox{\hyperlink{products_8h_a71bd54d332ca6237b3ef35cf84cd891ba271ddf829afeece44d8732757fba1a66}{TV}} = 2
+, \mbox{\hyperlink{products_8h_a71bd54d332ca6237b3ef35cf84cd891ba6ce4d85a628a88bbdb3ac24a8e5a9c2e}{Keyboard}} = 3
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \mbox{\hyperlink{products_8h_a97548047c12a27d43b8f48bd123cc3f5}{get\+Product\+Text}} (int enum\+Val)
+\end{DoxyCompactItemize}
+\doxysubsection*{Zmienne}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{products_8h_aaf174bdaa633108d47482a5ba14515b0}{Products\+Strings}} = \{ \char`\"{}Gaming\+Console\char`\"{}, \char`\"{}Game\+Pad\char`\"{}, \char`\"{}TV\char`\"{}, \char`\"{}Keyboard\char`\"{} \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Enum zawierający dostępne produkty jakie można przechowywać w aplikacji 
+
+\doxysubsection{Dokumentacja typów wyliczanych}
+\mbox{\Hypertarget{products_8h_a71bd54d332ca6237b3ef35cf84cd891b}\label{products_8h_a71bd54d332ca6237b3ef35cf84cd891b}} 
+\index{products.h@{products.h}!Products@{Products}}
+\index{Products@{Products}!products.h@{products.h}}
+\doxysubsubsection{\texorpdfstring{Products}{Products}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{products_8h_a71bd54d332ca6237b3ef35cf84cd891b}{Products}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Wartości wyliczeń}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GamingConsole@{GamingConsole}!products.h@{products.h}}\index{products.h@{products.h}!GamingConsole@{GamingConsole}}}\mbox{\Hypertarget{products_8h_a71bd54d332ca6237b3ef35cf84cd891ba85c01b9ff9497498deda0c0846f6497d}\label{products_8h_a71bd54d332ca6237b3ef35cf84cd891ba85c01b9ff9497498deda0c0846f6497d}} 
+Gaming\+Console&\mbox{\hyperlink{class_gaming_console}{Gaming\+Console}} -\/ Konsola do grania (np. Xbox) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GamePad@{GamePad}!products.h@{products.h}}\index{products.h@{products.h}!GamePad@{GamePad}}}\mbox{\Hypertarget{products_8h_a71bd54d332ca6237b3ef35cf84cd891babb8134cd77c31c188e34a0355f88bbc3}\label{products_8h_a71bd54d332ca6237b3ef35cf84cd891babb8134cd77c31c188e34a0355f88bbc3}} 
+Game\+Pad&Game\+Pad -\/ Kontroler do kosnoli czy komputera \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TV@{TV}!products.h@{products.h}}\index{products.h@{products.h}!TV@{TV}}}\mbox{\Hypertarget{products_8h_a71bd54d332ca6237b3ef35cf84cd891ba271ddf829afeece44d8732757fba1a66}\label{products_8h_a71bd54d332ca6237b3ef35cf84cd891ba271ddf829afeece44d8732757fba1a66}} 
+TV&\mbox{\hyperlink{class_t_v}{TV}} -\/ Telewizor \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Keyboard@{Keyboard}!products.h@{products.h}}\index{products.h@{products.h}!Keyboard@{Keyboard}}}\mbox{\Hypertarget{products_8h_a71bd54d332ca6237b3ef35cf84cd891ba6ce4d85a628a88bbdb3ac24a8e5a9c2e}\label{products_8h_a71bd54d332ca6237b3ef35cf84cd891ba6ce4d85a628a88bbdb3ac24a8e5a9c2e}} 
+Keyboard&\mbox{\hyperlink{class_keyboard}{Keyboard}} -\/ Klawiatura \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{products_8h_a97548047c12a27d43b8f48bd123cc3f5}\label{products_8h_a97548047c12a27d43b8f48bd123cc3f5}} 
+\index{products.h@{products.h}!getProductText@{getProductText}}
+\index{getProductText@{getProductText}!products.h@{products.h}}
+\doxysubsubsection{\texorpdfstring{getProductText()}{getProductText()}}
+{\footnotesize\ttfamily static const std\+::string get\+Product\+Text (\begin{DoxyParamCaption}\item[{int}]{enum\+Val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Zwraca wybraną nazwę tesktową pola enum 
+\begin{DoxyParams}{Parametry}
+{\em enum\+Val} & indeks wskazujący na to, którą nazwę enum metoda ma zwrócić \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Wartość enum w formacie string 
+\end{DoxyReturn}
+
+
+\doxysubsection{Dokumentacja zmiennych}
+\mbox{\Hypertarget{products_8h_aaf174bdaa633108d47482a5ba14515b0}\label{products_8h_aaf174bdaa633108d47482a5ba14515b0}} 
+\index{products.h@{products.h}!ProductsStrings@{ProductsStrings}}
+\index{ProductsStrings@{ProductsStrings}!products.h@{products.h}}
+\doxysubsubsection{\texorpdfstring{ProductsStrings}{ProductsStrings}}
+{\footnotesize\ttfamily const std\+::vector$<$std\+::string$>$ Products\+Strings = \{ \char`\"{}Gaming\+Console\char`\"{}, \char`\"{}Game\+Pad\char`\"{}, \char`\"{}TV\char`\"{}, \char`\"{}Keyboard\char`\"{} \}\hspace{0.3cm}{\ttfamily [static]}}
+
+Właściwość przechowująca w formacie string nazwy poszczególnych wartości enum 

@@ -1,0 +1,85 @@
+\hypertarget{class_storage_box}{}\doxysection{Dokumentacja klasy Storage\+Box}
+\label{class_storage_box}\index{StorageBox@{StorageBox}}
+
+
+{\ttfamily \#include $<$storagebox.\+h$>$}
+
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_storage_box_ac4d53690e635607e840c0f28c0ea05c8}\label{class_storage_box_ac4d53690e635607e840c0f28c0ea05c8}} 
+{\bfseries Storage\+Box} (Sizes size, std\+::string storage\+Box\+Id)
+\item 
+bool \mbox{\hyperlink{class_storage_box_aeea3ee6f0b8a2d5feb8baa34ba9731ea}{set\+Product}} (\mbox{\hyperlink{class_product}{Product}} $\ast$product)
+\item 
+\mbox{\hyperlink{class_product}{Product}} $\ast$ \mbox{\hyperlink{class_storage_box_ae7bad690d6f6904b489b41db256d3936}{get\+Product}} ()
+\item 
+Sizes \mbox{\hyperlink{class_storage_box_a7fc5e03ed4c1a3022c8c80189ee1208a}{get\+Size}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_storage_box_aaa8788069d80f512e2097f62cb0953e0}{get\+Storage\+Box\+Id}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_storage_box_af3a68e654cfdbb33e3e1a9f961cf46f7}\label{class_storage_box_af3a68e654cfdbb33e3e1a9f961cf46f7}} 
+\mbox{\hyperlink{class_product}{Product}} $\ast$ {\bfseries m\+\_\+product} = nullptr
+\item 
+\mbox{\Hypertarget{class_storage_box_a5a04d609f23265b22294084e57ef84cd}\label{class_storage_box_a5a04d609f23265b22294084e57ef84cd}} 
+Sizes {\bfseries m\+\_\+size}
+\item 
+\mbox{\Hypertarget{class_storage_box_ad4aaa34b7be24e75ef3d72e7af03d03c}\label{class_storage_box_ad4aaa34b7be24e75ef3d72e7af03d03c}} 
+std\+::string {\bfseries m\+\_\+storage\+Box\+Id}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa opisująca pudło przchowywania, w którym przechowywane będą produktu 
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_storage_box_ae7bad690d6f6904b489b41db256d3936}\label{class_storage_box_ae7bad690d6f6904b489b41db256d3936}} 
+\index{StorageBox@{StorageBox}!getProduct@{getProduct}}
+\index{getProduct@{getProduct}!StorageBox@{StorageBox}}
+\doxysubsubsection{\texorpdfstring{getProduct()}{getProduct()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_product}{Product}} $\ast$ Storage\+Box\+::get\+Product (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Zwraca}
+Wskaźnik na produkt przechowywany w pudle przechowywania 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_storage_box_a7fc5e03ed4c1a3022c8c80189ee1208a}\label{class_storage_box_a7fc5e03ed4c1a3022c8c80189ee1208a}} 
+\index{StorageBox@{StorageBox}!getSize@{getSize}}
+\index{getSize@{getSize}!StorageBox@{StorageBox}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily Sizes Storage\+Box\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Zwraca}
+Wartość enum rozmiaru jaki może przechowywać dane pudło przechowywania 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_storage_box_aaa8788069d80f512e2097f62cb0953e0}\label{class_storage_box_aaa8788069d80f512e2097f62cb0953e0}} 
+\index{StorageBox@{StorageBox}!getStorageBoxId@{getStorageBoxId}}
+\index{getStorageBoxId@{getStorageBoxId}!StorageBox@{StorageBox}}
+\doxysubsubsection{\texorpdfstring{getStorageBoxId()}{getStorageBoxId()}}
+{\footnotesize\ttfamily std\+::string Storage\+Box\+::get\+Storage\+Box\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Zwraca}
+Identyfikator danego pudła przechowywania 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_storage_box_aeea3ee6f0b8a2d5feb8baa34ba9731ea}\label{class_storage_box_aeea3ee6f0b8a2d5feb8baa34ba9731ea}} 
+\index{StorageBox@{StorageBox}!setProduct@{setProduct}}
+\index{setProduct@{setProduct}!StorageBox@{StorageBox}}
+\doxysubsubsection{\texorpdfstring{setProduct()}{setProduct()}}
+{\footnotesize\ttfamily bool Storage\+Box\+::set\+Product (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_product}{Product}} $\ast$}]{product }\end{DoxyParamCaption})}
+
+Dodaje produkt do pudła 
+\begin{DoxyParams}{Parametry}
+{\em product} & Wskaźnik na obiekt wybranego produktu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Wartość bool określającą czy udało się dodać produkt 
+\end{DoxyReturn}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+business\+Logic/warehouse/storagebox.\+h\item 
+business\+Logic/warehouse/storagebox.\+cpp\end{DoxyCompactItemize}

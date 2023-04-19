@@ -1,0 +1,44 @@
+\hypertarget{productcreator_8h_source}{}\doxysection{productcreator.\+h}
+\label{productcreator_8h_source}\index{qtWidgetUI/productcreator.h@{qtWidgetUI/productcreator.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ piotr\ on\ 21.03.2023.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ WAREHOUSESIMULATOR\_PRODUCTCREATOR\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ WAREHOUSESIMULATOR\_PRODUCTCREATOR\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QDialog>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}customWidgets/productwidget.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }Ui\ \{\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_product_creator}{ProductCreator}};\ \}}
+\DoxyCodeLine{00014\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_product_creator}{ProductCreator}}\ :\ \textcolor{keyword}{public}\ QDialog\ \{}
+\DoxyCodeLine{00020\ Q\_OBJECT}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_product_creator}{ProductCreator}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_product_creator}{\string~ProductCreator}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_ui_1_1_product_creator}{Ui::ProductCreator}}\ *ui;}
+\DoxyCodeLine{00029\ \ \ \ \ QWidget*\ m\_mainWindow;}
+\DoxyCodeLine{00030\ \ \ \ \ QList<QString>\ convertEnums(std::vector<std::string>\ enumNames);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ signals:}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_product_widget}{ProductWidget}}*\ \mbox{\hyperlink{class_product_creator_a127e08010e5aa1fd0b7d0388d106c7ec}{productAdded}}(\mbox{\hyperlink{class_product_widget}{ProductWidget}}\ *widget);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ onCancelBtnClick();}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ onCreateBtnClick();}
+\DoxyCodeLine{00043\ \};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//WAREHOUSESIMULATOR\_PRODUCTCREATOR\_H}}
+
+\end{DoxyCode}

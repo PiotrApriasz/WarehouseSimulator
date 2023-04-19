@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>WarehouseSimulator: Dokumentacja klasy Wardrobe&lt; AccessPolicies::FIFO &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">WarehouseSimulator<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Projekt magazynu symulującego przechowywanie różnego rodzaju produktów na szafkach z politykami dostępu FIFO, LIFO i  Free</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
+<a href="class_wardrobe_3_01_access_policies_1_1_f_i_f_o_01_4-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentacja klasy Wardrobe&lt; AccessPolicies::FIFO &gt;</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="fifowardrobe_8h_source.html">fifowardrobe.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:af1f433b5d1e34d8052e20f873cbc9b2a"><td class="memItemLeft" align="right" valign="top"><a id="af1f433b5d1e34d8052e20f873cbc9b2a" name="af1f433b5d1e34d8052e20f873cbc9b2a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Wardrobe</b> (std::vector&lt; <a class="el" href="class_storage_box.html">StorageBox</a> &gt; shelves, std::string wardrobeId)</td></tr>
+<tr class="separator:af1f433b5d1e34d8052e20f873cbc9b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8b80297d94638d7b29b099e68325854"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wardrobe_3_01_access_policies_1_1_f_i_f_o_01_4.html#ae8b80297d94638d7b29b099e68325854">addProduct</a> (<a class="el" href="class_product.html">Product</a> *product, std::string storageBoxId)</td></tr>
+<tr class="separator:ae8b80297d94638d7b29b099e68325854"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd500fe052541480a592c67b4efcabfd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wardrobe_3_01_access_policies_1_1_f_i_f_o_01_4.html#acd500fe052541480a592c67b4efcabfd">removeProduct</a> (<a class="el" href="class_product.html">Product</a> *product, std::string storageBoxId)</td></tr>
+<tr class="separator:acd500fe052541480a592c67b4efcabfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:af091318ee67154b91f3410e8664b7824"><td class="memItemLeft" align="right" valign="top"><a id="af091318ee67154b91f3410e8664b7824" name="af091318ee67154b91f3410e8664b7824"></a>
+std::vector&lt; <a class="el" href="class_storage_box.html">StorageBox</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_shelves</b></td></tr>
+<tr class="separator:af091318ee67154b91f3410e8664b7824"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af81ebec2ba03552dc228e976cb661215"><td class="memItemLeft" align="right" valign="top"><a id="af81ebec2ba03552dc228e976cb661215" name="af81ebec2ba03552dc228e976cb661215"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_wardrobeId</b></td></tr>
+<tr class="separator:af81ebec2ba03552dc228e976cb661215"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac758837b98e896e4b16d9c6afe7b2be1"><td class="memItemLeft" align="right" valign="top"><a id="ac758837b98e896e4b16d9c6afe7b2be1" name="ac758837b98e896e4b16d9c6afe7b2be1"></a>
+std::queue&lt; <a class="el" href="class_product.html">Product</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_products</b></td></tr>
+<tr class="separator:ac758837b98e896e4b16d9c6afe7b2be1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Klasa specjalizacji szablonów dla polityki dostępu FIFO. Do przechowywania produktów wykorzystuje kolejke </p>
+</div><h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="ae8b80297d94638d7b29b099e68325854" name="ae8b80297d94638d7b29b099e68325854"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8b80297d94638d7b29b099e68325854">&#9670;&#160;</a></span>addProduct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_wardrobe.html">Wardrobe</a>&lt; AccessPolicies::FIFO &gt;::addProduct </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_product.html">Product</a> *&#160;</td>
+          <td class="paramname"><em>product</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>storageBoxId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Dodaje przekazany produkt do wybranego z ui pudła przechowywania </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">product</td><td>Wskaźnik przekazywanego obiektu produktu </td></tr>
+    <tr><td class="paramname">storageBoxId</td><td>Identyfikator wybranego z ui pudła przechowywania </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Wartość bool określającą czy udało się dodać produkt </dd></dl>
+
+</div>
+</div>
+<a id="acd500fe052541480a592c67b4efcabfd" name="acd500fe052541480a592c67b4efcabfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd500fe052541480a592c67b4efcabfd">&#9670;&#160;</a></span>removeProduct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_wardrobe.html">Wardrobe</a>&lt; AccessPolicies::FIFO &gt;::removeProduct </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_product.html">Product</a> *&#160;</td>
+          <td class="paramname"><em>product</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>storageBoxId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Zdejmuje produkt z wybranej półki przechowywania o ile zezwala na to polityka dostepu szafy </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">product</td><td>Wskaźnik na obiekt produktu do zdjęcia z szafy </td></tr>
+    <tr><td class="paramname">storageBoxId</td><td>Identyfikator wybranego z ui pudła przechowywania </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Wartość bool określającą czy dany produkt można zdjąć z pudła </dd></dl>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>businessLogic/warehouse/<a class="el" href="fifowardrobe_8h_source.html">fifowardrobe.h</a></li>
+<li>businessLogic/warehouse/fifowardrobe.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

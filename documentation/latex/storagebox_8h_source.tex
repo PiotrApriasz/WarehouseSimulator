@@ -1,0 +1,36 @@
+\hypertarget{storagebox_8h_source}{}\doxysection{storagebox.\+h}
+\label{storagebox_8h_source}\index{businessLogic/warehouse/storagebox.h@{businessLogic/warehouse/storagebox.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ piotr\ on\ 29.03.2023.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ WAREHOUSESIMULATOR\_STORAGEBOX\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ WAREHOUSESIMULATOR\_STORAGEBOX\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}../products/product.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}../enums/sizes.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_storage_box}{StorageBox}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_storage_box}{StorageBox}}(Sizes\ size,\ std::string\ storageBoxId);}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_storage_box_aeea3ee6f0b8a2d5feb8baa34ba9731ea}{setProduct}}(\mbox{\hyperlink{class_product}{Product}}\ *product);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_product}{Product}}\ *\mbox{\hyperlink{class_storage_box_ae7bad690d6f6904b489b41db256d3936}{getProduct}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00033\ \ \ \ \ Sizes\ \mbox{\hyperlink{class_storage_box_a7fc5e03ed4c1a3022c8c80189ee1208a}{getSize}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00038\ \ \ \ \ std::string\ \mbox{\hyperlink{class_storage_box_aaa8788069d80f512e2097f62cb0953e0}{getStorageBoxId}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_product}{Product}}\ *m\_product\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00042\ \ \ \ \ Sizes\ m\_size;}
+\DoxyCodeLine{00043\ \ \ \ \ std::string\ m\_storageBoxId;}
+\DoxyCodeLine{00044\ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//WAREHOUSESIMULATOR\_STORAGEBOX\_H}}
+
+\end{DoxyCode}

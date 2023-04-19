@@ -1,0 +1,90 @@
+\hypertarget{class_product}{}\doxysection{Dokumentacja klasy Product}
+\label{class_product}\index{Product@{Product}}
+
+
+{\ttfamily \#include $<$product.\+h$>$}
+
+Diagram dziedziczenia dla Product\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_product}
+\end{center}
+\end{figure}
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_product_a634bd1316471e1d6839b13af3e9e90cc}\label{class_product_a634bd1316471e1d6839b13af3e9e90cc}} 
+{\bfseries Product} (std\+::string name, std\+::string image\+Path, Sizes size)
+\item 
+std\+::string \mbox{\hyperlink{class_product_a5d6863c7a2d45dbcb469c2956b0aa333}{get\+Name}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_product_a14b96af5e98a24cb8476575476977fd1}{get\+Image\+Path}} ()
+\item 
+Sizes \mbox{\hyperlink{class_product_a95f9df58e3c02603a6c22a8283c7903d}{get\+Size}} ()
+\item 
+virtual std\+::string \mbox{\hyperlink{class_product_ae2b802d9b67740df43b7772a35861a96}{get\+Product\+Send\+Info}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty chronione}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_product_ad9606cfc985df10f9bd222cfd8db5380}\label{class_product_ad9606cfc985df10f9bd222cfd8db5380}} 
+std\+::string {\bfseries m\+\_\+name}
+\item 
+\mbox{\Hypertarget{class_product_a59df8a4794c323fa080e430a3db88bbb}\label{class_product_a59df8a4794c323fa080e430a3db88bbb}} 
+std\+::string {\bfseries m\+\_\+image\+Path}
+\item 
+\mbox{\Hypertarget{class_product_a8a82e47ba4cf41cf9df51e36ec9bf826}\label{class_product_a8a82e47ba4cf41cf9df51e36ec9bf826}} 
+Sizes {\bfseries m\+\_\+product\+Size}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Bazowa klasa opisująca produkty 
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_product_a14b96af5e98a24cb8476575476977fd1}\label{class_product_a14b96af5e98a24cb8476575476977fd1}} 
+\index{Product@{Product}!getImagePath@{getImagePath}}
+\index{getImagePath@{getImagePath}!Product@{Product}}
+\doxysubsubsection{\texorpdfstring{getImagePath()}{getImagePath()}}
+{\footnotesize\ttfamily std\+::string Product\+::get\+Image\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Zwraca}
+Ściężka do obrazu wizualizującego produkt 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_product_a5d6863c7a2d45dbcb469c2956b0aa333}\label{class_product_a5d6863c7a2d45dbcb469c2956b0aa333}} 
+\index{Product@{Product}!getName@{getName}}
+\index{getName@{getName}!Product@{Product}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Product\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Zwraca}
+Nazwa produktu 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_product_ae2b802d9b67740df43b7772a35861a96}\label{class_product_ae2b802d9b67740df43b7772a35861a96}} 
+\index{Product@{Product}!getProductSendInfo@{getProductSendInfo}}
+\index{getProductSendInfo@{getProductSendInfo}!Product@{Product}}
+\doxysubsubsection{\texorpdfstring{getProductSendInfo()}{getProductSendInfo()}}
+{\footnotesize\ttfamily std\+::string Product\+::get\+Product\+Send\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Metoda wirtualna, którą mogą nadpisywać klasy dziedziczące \begin{DoxyReturn}{Zwraca}
+Informacja, którą można wyświetlić podczas wysyłki/zdejmowania towaru 
+\end{DoxyReturn}
+
+
+Reimplementowana w \mbox{\hyperlink{class_gamepad_a5d1575106b0387e196421fb0ddc5c451}{Gamepad}}, \mbox{\hyperlink{class_gaming_console_aa66038d3863e3d0a0769e31222d5e6c9}{Gaming\+Console}}, \mbox{\hyperlink{class_keyboard_ae5558cab072cdd1dc2d75557b8d7b9ef}{Keyboard}} i \mbox{\hyperlink{class_t_v_a6f7e6b8b8d1f3b6d2e4dca7199c37836}{TV}}.
+
+\mbox{\Hypertarget{class_product_a95f9df58e3c02603a6c22a8283c7903d}\label{class_product_a95f9df58e3c02603a6c22a8283c7903d}} 
+\index{Product@{Product}!getSize@{getSize}}
+\index{getSize@{getSize}!Product@{Product}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily Sizes Product\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Zwraca}
+Rozmiar produktu 
+\end{DoxyReturn}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+business\+Logic/products/product.\+h\item 
+business\+Logic/products/product.\+cpp\end{DoxyCompactItemize}

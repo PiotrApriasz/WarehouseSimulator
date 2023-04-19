@@ -1,0 +1,36 @@
+\hypertarget{accesspolicies_8h}{}\doxysection{Dokumentacja pliku business\+Logic/enums/accesspolicies.h}
+\label{accesspolicies_8h}\index{businessLogic/enums/accesspolicies.h@{businessLogic/enums/accesspolicies.h}}
+\doxysubsection*{Wyliczenia}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{accesspolicies_8h_a8752a5f4be67e47bb68a38b91e61dbf0}{Access\+Policies}} \{ \mbox{\hyperlink{accesspolicies_8h_a8752a5f4be67e47bb68a38b91e61dbf0ac589858dbe1d06c46544266ae4cd2c6f}{FIFO}} = 0
+, \mbox{\hyperlink{accesspolicies_8h_a8752a5f4be67e47bb68a38b91e61dbf0a249e6270d397378907bb92948fb14876}{LIFO}} = 1
+, \mbox{\hyperlink{accesspolicies_8h_a8752a5f4be67e47bb68a38b91e61dbf0ab24ce0cd392a5b0b8dedc66c25213594}{Free}} = 2
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Enum zawierający polityki dostępu szaf w magazynie 
+
+\doxysubsection{Dokumentacja typów wyliczanych}
+\mbox{\Hypertarget{accesspolicies_8h_a8752a5f4be67e47bb68a38b91e61dbf0}\label{accesspolicies_8h_a8752a5f4be67e47bb68a38b91e61dbf0}} 
+\index{accesspolicies.h@{accesspolicies.h}!AccessPolicies@{AccessPolicies}}
+\index{AccessPolicies@{AccessPolicies}!accesspolicies.h@{accesspolicies.h}}
+\doxysubsubsection{\texorpdfstring{AccessPolicies}{AccessPolicies}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{accesspolicies_8h_a8752a5f4be67e47bb68a38b91e61dbf0}{Access\+Policies}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Wartości wyliczeń}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FIFO@{FIFO}!accesspolicies.h@{accesspolicies.h}}\index{accesspolicies.h@{accesspolicies.h}!FIFO@{FIFO}}}\mbox{\Hypertarget{accesspolicies_8h_a8752a5f4be67e47bb68a38b91e61dbf0ac589858dbe1d06c46544266ae4cd2c6f}\label{accesspolicies_8h_a8752a5f4be67e47bb68a38b91e61dbf0ac589858dbe1d06c46544266ae4cd2c6f}} 
+FIFO&FIFO -\/ First In First Out -\/ Symuluje działanie kolejki. Pierwszy położony produkt musi być zdjęty w pierwszej kolejności. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LIFO@{LIFO}!accesspolicies.h@{accesspolicies.h}}\index{accesspolicies.h@{accesspolicies.h}!LIFO@{LIFO}}}\mbox{\Hypertarget{accesspolicies_8h_a8752a5f4be67e47bb68a38b91e61dbf0a249e6270d397378907bb92948fb14876}\label{accesspolicies_8h_a8752a5f4be67e47bb68a38b91e61dbf0a249e6270d397378907bb92948fb14876}} 
+LIFO&LIFO -\/ Last In First Out -\/ Symuluje działanie stosu. Ostatni położony produkt musi być zdjęty w pierwszej kolejności. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Free@{Free}!accesspolicies.h@{accesspolicies.h}}\index{accesspolicies.h@{accesspolicies.h}!Free@{Free}}}\mbox{\Hypertarget{accesspolicies_8h_a8752a5f4be67e47bb68a38b91e61dbf0ab24ce0cd392a5b0b8dedc66c25213594}\label{accesspolicies_8h_a8752a5f4be67e47bb68a38b91e61dbf0ab24ce0cd392a5b0b8dedc66c25213594}} 
+Free&Free -\/ Dostęp dowolny -\/ Symuluje działanie listy. Produkty można zdejmować dowolnie. \\
+\hline
+
+\end{DoxyEnumFields}

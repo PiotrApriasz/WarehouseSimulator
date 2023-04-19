@@ -1,0 +1,74 @@
+\hypertarget{class_product_creator}{}\doxysection{Dokumentacja klasy Product\+Creator}
+\label{class_product_creator}\index{ProductCreator@{ProductCreator}}
+
+
+{\ttfamily \#include $<$productcreator.\+h$>$}
+
+Diagram dziedziczenia dla Product\+Creator\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_product_creator}
+\end{center}
+\end{figure}
+\doxysubsection*{Sygnały}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_product_widget}{Product\+Widget}} $\ast$ \mbox{\hyperlink{class_product_creator_a127e08010e5aa1fd0b7d0388d106c7ec}{product\+Added}} (\mbox{\hyperlink{class_product_widget}{Product\+Widget}} $\ast$widget)
+\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_product_creator_a06413e830b80a7b04a39d79feb0bd539}\label{class_product_creator_a06413e830b80a7b04a39d79feb0bd539}} 
+{\bfseries Product\+Creator} (QWidget $\ast$parent=nullptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Sloty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_product_creator_a5791e63b1b742e5a3da79db0d7a09964}\label{class_product_creator_a5791e63b1b742e5a3da79db0d7a09964}} 
+void {\bfseries on\+Cancel\+Btn\+Click} ()
+\item 
+\mbox{\Hypertarget{class_product_creator_a17de4d313433d2be90e0d974a18d6a02}\label{class_product_creator_a17de4d313433d2be90e0d974a18d6a02}} 
+void {\bfseries on\+Create\+Btn\+Click} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_product_creator_a94a3e588b0d465e98a4da7e418029218}\label{class_product_creator_a94a3e588b0d465e98a4da7e418029218}} 
+QList$<$ QString $>$ {\bfseries convert\+Enums} (std\+::vector$<$ std\+::string $>$ enum\+Names)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_product_creator_a66ee7468d66bb3fda0edabb9e1783a7f}\label{class_product_creator_a66ee7468d66bb3fda0edabb9e1783a7f}} 
+\mbox{\hyperlink{class_ui_1_1_product_creator}{Ui\+::\+Product\+Creator}} $\ast$ {\bfseries ui}
+\item 
+\mbox{\Hypertarget{class_product_creator_aeb47faf014b678c111227ea088ff44ad}\label{class_product_creator_aeb47faf014b678c111227ea088ff44ad}} 
+QWidget $\ast$ {\bfseries m\+\_\+main\+Window}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa reprezentująca okno kreatora produktów. Dziedziczy po klasie QDialog. 
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_product_creator_a127e08010e5aa1fd0b7d0388d106c7ec}\label{class_product_creator_a127e08010e5aa1fd0b7d0388d106c7ec}} 
+\index{ProductCreator@{ProductCreator}!productAdded@{productAdded}}
+\index{productAdded@{productAdded}!ProductCreator@{ProductCreator}}
+\doxysubsubsection{\texorpdfstring{productAdded}{productAdded}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_product_widget}{Product\+Widget}} $\ast$ Product\+Creator\+::product\+Added (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_product_widget}{Product\+Widget}} $\ast$}]{widget }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+Sygnał sygnalizujący utworznie nowego widgetu produktu 
+\begin{DoxyParams}{Parametry}
+{\em widget} & Wskażnik na obiekt utworzonego widgetu produktu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Zwraca wskaźnik utworzonego widgetu produktu 
+\end{DoxyReturn}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+qt\+Widget\+UI/productcreator.\+h\item 
+cmake-\/build-\/debug/\+Warehouse\+Simulator\+\_\+autogen/4\+LNKO26\+U26/moc\+\_\+productcreator.\+cpp\item 
+qt\+Widget\+UI/productcreator.\+cpp\end{DoxyCompactItemize}

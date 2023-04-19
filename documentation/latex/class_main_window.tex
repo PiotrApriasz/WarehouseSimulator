@@ -1,0 +1,182 @@
+\hypertarget{class_main_window}{}\doxysection{Dokumentacja klasy Main\+Window}
+\label{class_main_window}\index{MainWindow@{MainWindow}}
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+Diagram dziedziczenia dla Main\+Window\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_main_window}
+\end{center}
+\end{figure}
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_main_window_a996c5a2b6f77944776856f08ec30858d}\label{class_main_window_a996c5a2b6f77944776856f08ec30858d}} 
+{\bfseries Main\+Window} (QWidget $\ast$parent=nullptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Sloty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_main_window_aef9e309e1db695d931ff4857ce14e7c2}{on\+Create\+Product\+Btn\+Click}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_aae77b3db4b4ebab826dc329612936cfb}{add\+New\+Product}} (QWidget $\ast$widget)
+\item 
+void \mbox{\hyperlink{class_main_window_a9b9fce39ad220c9a98e69a814dad990d}{move\+Product}} (QWidget $\ast$widget)
+\item 
+void \mbox{\hyperlink{class_main_window_a279b6423b7deb039f663c3f189510748}{on\+Send\+Btn\+Click}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_main_window_a81e2708bb61117ea39c2e6933325a0ca}{initialize\+Wardrobes}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a8c7681f1e71cd336fe109da2fd86d1eb}{initialize\+Wardrobe1\+Click\+Handlers}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_ae40adf1b71ec5acebaf3daf856efb971}{initialize\+Wardrobe2\+Click\+Handlers}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_ae9196d172f42e22e747487df6a383c7e}{initialize\+Wardrobe3\+Click\+Handlers}} ()
+\item 
+bool \mbox{\hyperlink{class_main_window_ae4842445ceac3c4ffe48e235645382ff}{add\+Product\+To\+Storage\+Box}} (\mbox{\hyperlink{class_product}{Product}} $\ast$product, const std\+::string \&storage\+Box\+Id)
+\item 
+bool \mbox{\hyperlink{class_main_window_a4718099faa3466f11ee5c7a5ad383066}{delete\+Product\+From\+Storage\+Box}} (\mbox{\hyperlink{class_product}{Product}} $\ast$product, const std\+::string \&storage\+Box\+Id)
+\end{DoxyCompactItemize}
+\doxysubsection*{Statyczne metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_main_window_abdee2c7bf41c0c6fe9d60db165ec4820}{show\+Message\+Box}} (const std\+::string \&title, const std\+::string \&text)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_main_window_a7f02e7297b5c1052fca839c1ce6fd945}\label{class_main_window_a7f02e7297b5c1052fca839c1ce6fd945}} 
+\mbox{\hyperlink{class_product_creator}{Product\+Creator}} $\ast$ {\bfseries m\+\_\+product\+DB}
+\item 
+\mbox{\Hypertarget{class_main_window_a35466a70ed47252a0191168126a352a5}\label{class_main_window_a35466a70ed47252a0191168126a352a5}} 
+\mbox{\hyperlink{class_ui_1_1_main_window}{Ui\+::\+Main\+Window}} $\ast$ {\bfseries ui}
+\item 
+\mbox{\Hypertarget{class_main_window_a5740b07739c23133a743516db7901d9a}\label{class_main_window_a5740b07739c23133a743516db7901d9a}} 
+\mbox{\hyperlink{class_wardrobe}{Wardrobe}}$<$ Access\+Policies\+::\+FIFO $>$ $\ast$ {\bfseries m\+\_\+fifo\+Wardrobe}
+\item 
+\mbox{\Hypertarget{class_main_window_a4337bf9d3b993b4b666235b5799bf8e7}\label{class_main_window_a4337bf9d3b993b4b666235b5799bf8e7}} 
+\mbox{\hyperlink{class_wardrobe}{Wardrobe}}$<$ Access\+Policies\+::\+LIFO $>$ $\ast$ {\bfseries m\+\_\+lifo\+Wardrobe}
+\item 
+\mbox{\Hypertarget{class_main_window_afa5bc8959043afbc443055b5fa9e18d1}\label{class_main_window_afa5bc8959043afbc443055b5fa9e18d1}} 
+\mbox{\hyperlink{class_wardrobe}{Wardrobe}}$<$ Access\+Policies\+::\+Free $>$ $\ast$ {\bfseries m\+\_\+free\+Wardrobe}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa reprezentująca główne okno aplikacji gdzie dostępna jest większość jej funkcjonalności. Dziedziczy po QMain\+Window. 
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_main_window_aae77b3db4b4ebab826dc329612936cfb}\label{class_main_window_aae77b3db4b4ebab826dc329612936cfb}} 
+\index{MainWindow@{MainWindow}!addNewProduct@{addNewProduct}}
+\index{addNewProduct@{addNewProduct}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{addNewProduct}{addNewProduct}}
+{\footnotesize\ttfamily void Main\+Window\+::add\+New\+Product (\begin{DoxyParamCaption}\item[{QWidget $\ast$}]{widget }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+Slot wywoływany w momencie utworzenia nowego produktu w kreatorze produktów. Dodaje widget produktu do okna nowych produktów 
+\begin{DoxyParams}{Parametry}
+{\em widget} & Utworzony widget produktu \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_ae4842445ceac3c4ffe48e235645382ff}\label{class_main_window_ae4842445ceac3c4ffe48e235645382ff}} 
+\index{MainWindow@{MainWindow}!addProductToStorageBox@{addProductToStorageBox}}
+\index{addProductToStorageBox@{addProductToStorageBox}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{addProductToStorageBox()}{addProductToStorageBox()}}
+{\footnotesize\ttfamily bool Main\+Window\+::add\+Product\+To\+Storage\+Box (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_product}{Product}} $\ast$}]{product,  }\item[{const std\+::string \&}]{storage\+Box\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Główna metoda dodająca produkt do wybranego pudła przechowywania 
+\begin{DoxyParams}{Parametry}
+{\em product} & Wskaźnik na obiekt dodawanego produktu \\
+\hline
+{\em storage\+Box\+Id} & Identyfikator wybranego pudła przechowywania, do którego użytkownik chce dodać produkt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Wartość bool określającą czy udało się dodać produkt 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_main_window_a4718099faa3466f11ee5c7a5ad383066}\label{class_main_window_a4718099faa3466f11ee5c7a5ad383066}} 
+\index{MainWindow@{MainWindow}!deleteProductFromStorageBox@{deleteProductFromStorageBox}}
+\index{deleteProductFromStorageBox@{deleteProductFromStorageBox}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{deleteProductFromStorageBox()}{deleteProductFromStorageBox()}}
+{\footnotesize\ttfamily bool Main\+Window\+::delete\+Product\+From\+Storage\+Box (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_product}{Product}} $\ast$}]{product,  }\item[{const std\+::string \&}]{storage\+Box\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Główna metoda usuwania wybranego produktu z pudła przechowywania 
+\begin{DoxyParams}{Parametry}
+{\em product} & Wskaźnik na obiekt usuwanego produktu \\
+\hline
+{\em storage\+Box\+Id} & Identyfikator wybranego pudła przechowywania, z którego użytkownik chce zdjąć produkt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Wartość bool określającą czy udało się zdjąć produkt 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_main_window_a8c7681f1e71cd336fe109da2fd86d1eb}\label{class_main_window_a8c7681f1e71cd336fe109da2fd86d1eb}} 
+\index{MainWindow@{MainWindow}!initializeWardrobe1ClickHandlers@{initializeWardrobe1ClickHandlers}}
+\index{initializeWardrobe1ClickHandlers@{initializeWardrobe1ClickHandlers}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{initializeWardrobe1ClickHandlers()}{initializeWardrobe1ClickHandlers()}}
+{\footnotesize\ttfamily void Main\+Window\+::initialize\+Wardrobe1\+Click\+Handlers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Inicjalizuje obsługę kliknieć dla szafy 1 \mbox{\Hypertarget{class_main_window_ae40adf1b71ec5acebaf3daf856efb971}\label{class_main_window_ae40adf1b71ec5acebaf3daf856efb971}} 
+\index{MainWindow@{MainWindow}!initializeWardrobe2ClickHandlers@{initializeWardrobe2ClickHandlers}}
+\index{initializeWardrobe2ClickHandlers@{initializeWardrobe2ClickHandlers}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{initializeWardrobe2ClickHandlers()}{initializeWardrobe2ClickHandlers()}}
+{\footnotesize\ttfamily void Main\+Window\+::initialize\+Wardrobe2\+Click\+Handlers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Inicjalizuje obsługę kliknieć dla szafy 2 \mbox{\Hypertarget{class_main_window_ae9196d172f42e22e747487df6a383c7e}\label{class_main_window_ae9196d172f42e22e747487df6a383c7e}} 
+\index{MainWindow@{MainWindow}!initializeWardrobe3ClickHandlers@{initializeWardrobe3ClickHandlers}}
+\index{initializeWardrobe3ClickHandlers@{initializeWardrobe3ClickHandlers}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{initializeWardrobe3ClickHandlers()}{initializeWardrobe3ClickHandlers()}}
+{\footnotesize\ttfamily void Main\+Window\+::initialize\+Wardrobe3\+Click\+Handlers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Inicjalizuje obsługę kliknieć dla szafy 3 \mbox{\Hypertarget{class_main_window_a81e2708bb61117ea39c2e6933325a0ca}\label{class_main_window_a81e2708bb61117ea39c2e6933325a0ca}} 
+\index{MainWindow@{MainWindow}!initializeWardrobes@{initializeWardrobes}}
+\index{initializeWardrobes@{initializeWardrobes}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{initializeWardrobes()}{initializeWardrobes()}}
+{\footnotesize\ttfamily void Main\+Window\+::initialize\+Wardrobes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Inijalizuje obieky szaf, które będzie można uzywać podczas obsługi programu \mbox{\Hypertarget{class_main_window_a9b9fce39ad220c9a98e69a814dad990d}\label{class_main_window_a9b9fce39ad220c9a98e69a814dad990d}} 
+\index{MainWindow@{MainWindow}!moveProduct@{moveProduct}}
+\index{moveProduct@{moveProduct}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{moveProduct}{moveProduct}}
+{\footnotesize\ttfamily void Main\+Window\+::move\+Product (\begin{DoxyParamCaption}\item[{QWidget $\ast$}]{widget }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+Slot wywoływany w momencie chęci dodania produktu do szafy lub jego zdjęcia. Implementuje logikę przenoszenia widgetów w wybrane miejsca UI 
+\begin{DoxyParams}{Parametry}
+{\em widget} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_aef9e309e1db695d931ff4857ce14e7c2}\label{class_main_window_aef9e309e1db695d931ff4857ce14e7c2}} 
+\index{MainWindow@{MainWindow}!onCreateProductBtnClick@{onCreateProductBtnClick}}
+\index{onCreateProductBtnClick@{onCreateProductBtnClick}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{onCreateProductBtnClick}{onCreateProductBtnClick}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+Create\+Product\+Btn\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+Slot wywoływany po kliknięciu przycisku tworzenia produktu. Pokazuje okno kreatora produktów \mbox{\Hypertarget{class_main_window_a279b6423b7deb039f663c3f189510748}\label{class_main_window_a279b6423b7deb039f663c3f189510748}} 
+\index{MainWindow@{MainWindow}!onSendBtnClick@{onSendBtnClick}}
+\index{onSendBtnClick@{onSendBtnClick}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{onSendBtnClick}{onSendBtnClick}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+Send\+Btn\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+Slot wywoływany w momencie kliknięcia przycisku wysłania/usunięcia produktu. Obsługuje logikę niszczenia obiektu i widgetu produktu \mbox{\Hypertarget{class_main_window_abdee2c7bf41c0c6fe9d60db165ec4820}\label{class_main_window_abdee2c7bf41c0c6fe9d60db165ec4820}} 
+\index{MainWindow@{MainWindow}!showMessageBox@{showMessageBox}}
+\index{showMessageBox@{showMessageBox}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{showMessageBox()}{showMessageBox()}}
+{\footnotesize\ttfamily void Main\+Window\+::show\+Message\+Box (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{title,  }\item[{const std\+::string \&}]{text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Pokazuje okno dialogowe z podanym tytułem i treścią 
+\begin{DoxyParams}{Parametry}
+{\em title} & Tytuł dla okna dialogowego \\
+\hline
+{\em text} & Treść okna dialogowego \\
+\hline
+\end{DoxyParams}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+qt\+Widget\+UI/mainwindow.\+h\item 
+qt\+Widget\+UI/mainwindow.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,72 @@
+\hypertarget{class_gaming_console}{}\doxysection{Dokumentacja klasy Gaming\+Console}
+\label{class_gaming_console}\index{GamingConsole@{GamingConsole}}
+
+
+{\ttfamily \#include $<$gamingconsole.\+h$>$}
+
+Diagram dziedziczenia dla Gaming\+Console\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_gaming_console}
+\end{center}
+\end{figure}
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_gaming_console_a03f8824f117e0c029621f8c5d54c8464}\label{class_gaming_console_a03f8824f117e0c029621f8c5d54c8464}} 
+{\bfseries Gaming\+Console} (std\+::string name, std\+::string image\+Path, Sizes size)
+\item 
+std\+::string \mbox{\hyperlink{class_gaming_console_aa66038d3863e3d0a0769e31222d5e6c9}{get\+Product\+Send\+Info}} () override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_product}{Product}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_product_a634bd1316471e1d6839b13af3e9e90cc}\label{class_product_a634bd1316471e1d6839b13af3e9e90cc}} 
+{\bfseries Product} (std\+::string name, std\+::string image\+Path, Sizes size)
+\item 
+std\+::string \mbox{\hyperlink{class_product_a5d6863c7a2d45dbcb469c2956b0aa333}{get\+Name}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_product_a14b96af5e98a24cb8476575476977fd1}{get\+Image\+Path}} ()
+\item 
+Sizes \mbox{\hyperlink{class_product_a95f9df58e3c02603a6c22a8283c7903d}{get\+Size}} ()
+\item 
+virtual std\+::string \mbox{\hyperlink{class_product_ae2b802d9b67740df43b7772a35861a96}{get\+Product\+Send\+Info}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Dodatkowe Dziedziczone Składowe}
+\doxysubsubsection*{Atrybuty chronione dziedziczone z \mbox{\hyperlink{class_product}{Product}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_product_ad9606cfc985df10f9bd222cfd8db5380}\label{class_product_ad9606cfc985df10f9bd222cfd8db5380}} 
+std\+::string {\bfseries m\+\_\+name}
+\item 
+\mbox{\Hypertarget{class_product_a59df8a4794c323fa080e430a3db88bbb}\label{class_product_a59df8a4794c323fa080e430a3db88bbb}} 
+std\+::string {\bfseries m\+\_\+image\+Path}
+\item 
+\mbox{\Hypertarget{class_product_a8a82e47ba4cf41cf9df51e36ec9bf826}\label{class_product_a8a82e47ba4cf41cf9df51e36ec9bf826}} 
+Sizes {\bfseries m\+\_\+product\+Size}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa opisująca produkt Gaming Conole dziedzicząca po klasie \mbox{\hyperlink{class_product}{Product}} 
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_gaming_console_aa66038d3863e3d0a0769e31222d5e6c9}\label{class_gaming_console_aa66038d3863e3d0a0769e31222d5e6c9}} 
+\index{GamingConsole@{GamingConsole}!getProductSendInfo@{getProductSendInfo}}
+\index{getProductSendInfo@{getProductSendInfo}!GamingConsole@{GamingConsole}}
+\doxysubsubsection{\texorpdfstring{getProductSendInfo()}{getProductSendInfo()}}
+{\footnotesize\ttfamily std\+::string Gaming\+Console\+::get\+Product\+Send\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Zwraca}
+Informacja, którą można wyświetlić podczas wysyłki/zdejmowania towaru 
+\end{DoxyReturn}
+
+
+Reimplementowana z \mbox{\hyperlink{class_product_ae2b802d9b67740df43b7772a35861a96}{Product}}.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+business\+Logic/products/gamingconsole.\+h\item 
+business\+Logic/products/gamingconsole.\+cpp\end{DoxyCompactItemize}

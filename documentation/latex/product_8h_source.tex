@@ -1,0 +1,35 @@
+\hypertarget{product_8h_source}{}\doxysection{product.\+h}
+\label{product_8h_source}\index{businessLogic/products/product.h@{businessLogic/products/product.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ piotr\ on\ 20.03.2023.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ WAREHOUSESIMULATOR\_PRODUCT\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ WAREHOUSESIMULATOR\_PRODUCT\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}../enums/sizes.h"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_product}{Product}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_product}{Product}}(std::string\ name,\ std::string\ imagePath,\ Sizes\ size);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00022\ \ \ \ \ std::string\ \mbox{\hyperlink{class_product_a5d6863c7a2d45dbcb469c2956b0aa333}{getName}}();}
+\DoxyCodeLine{00026\ \ \ \ \ std::string\ \mbox{\hyperlink{class_product_a14b96af5e98a24cb8476575476977fd1}{getImagePath}}();}
+\DoxyCodeLine{00030\ \ \ \ \ Sizes\ \mbox{\hyperlink{class_product_a95f9df58e3c02603a6c22a8283c7903d}{getSize}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{class_product_ae2b802d9b67740df43b7772a35861a96}{getProductSendInfo}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00039\ \ \ \ \ std::string\ m\_name;}
+\DoxyCodeLine{00040\ \ \ \ \ std::string\ m\_imagePath;}
+\DoxyCodeLine{00041\ \ \ \ \ Sizes\ m\_productSize;}
+\DoxyCodeLine{00042\ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//WAREHOUSESIMULATOR\_PRODUCT\_H}}
+
+\end{DoxyCode}

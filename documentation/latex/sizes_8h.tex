@@ -1,0 +1,51 @@
+\hypertarget{sizes_8h}{}\doxysection{Dokumentacja pliku business\+Logic/enums/sizes.h}
+\label{sizes_8h}\index{businessLogic/enums/sizes.h@{businessLogic/enums/sizes.h}}
+\doxysubsection*{Wyliczenia}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sizes_8h_aec3b30862f38fd9e8e9f613fd174e92d}\label{sizes_8h_aec3b30862f38fd9e8e9f613fd174e92d}} 
+enum class {\bfseries Sizes} \{ {\bfseries Small}
+, {\bfseries Medium}
+, {\bfseries Big}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \mbox{\hyperlink{sizes_8h_a4058161605754fb9e698b2dbf6237085}{get\+Size\+Text}} (int enum\+Val)
+\end{DoxyCompactItemize}
+\doxysubsection*{Zmienne}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{sizes_8h_a887bbbfd20743ab8a03d545e085f57e7}{Sizes\+Strings}} = \{ \char`\"{}Small\char`\"{}, \char`\"{}Medium\char`\"{}, \char`\"{}Big\char`\"{} \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Enum zawierający dostępne rozmiary produktów 
+
+\doxysubsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{sizes_8h_a4058161605754fb9e698b2dbf6237085}\label{sizes_8h_a4058161605754fb9e698b2dbf6237085}} 
+\index{sizes.h@{sizes.h}!getSizeText@{getSizeText}}
+\index{getSizeText@{getSizeText}!sizes.h@{sizes.h}}
+\doxysubsubsection{\texorpdfstring{getSizeText()}{getSizeText()}}
+{\footnotesize\ttfamily static const std\+::string get\+Size\+Text (\begin{DoxyParamCaption}\item[{int}]{enum\+Val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Zwraca wybraną nazwę tesktową pola enum 
+\begin{DoxyParams}{Parametry}
+{\em enum\+Val} & indeks wskazujący na to, którą nazwę enum metoda ma zwrócić \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Wartość enum w formacie string 
+\end{DoxyReturn}
+
+
+\doxysubsection{Dokumentacja zmiennych}
+\mbox{\Hypertarget{sizes_8h_a887bbbfd20743ab8a03d545e085f57e7}\label{sizes_8h_a887bbbfd20743ab8a03d545e085f57e7}} 
+\index{sizes.h@{sizes.h}!SizesStrings@{SizesStrings}}
+\index{SizesStrings@{SizesStrings}!sizes.h@{sizes.h}}
+\doxysubsubsection{\texorpdfstring{SizesStrings}{SizesStrings}}
+{\footnotesize\ttfamily const std\+::vector$<$std\+::string$>$ Sizes\+Strings = \{ \char`\"{}Small\char`\"{}, \char`\"{}Medium\char`\"{}, \char`\"{}Big\char`\"{} \}\hspace{0.3cm}{\ttfamily [static]}}
+
+Właściwość przechowująca w formacie string nazwy poszczególnych wartości enum 

@@ -1,0 +1,72 @@
+\hypertarget{class_wardrobe_3_01_access_policies_1_1_l_i_f_o_01_4}{}\doxysection{Dokumentacja klasy Wardrobe\texorpdfstring{$<$}{<} Access\+Policies\+::LIFO \texorpdfstring{$>$}{>}}
+\label{class_wardrobe_3_01_access_policies_1_1_l_i_f_o_01_4}\index{Wardrobe$<$ AccessPolicies::LIFO $>$@{Wardrobe$<$ AccessPolicies::LIFO $>$}}
+
+
+{\ttfamily \#include $<$lifowardrobe.\+h$>$}
+
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_wardrobe_3_01_access_policies_1_1_l_i_f_o_01_4_a85e701e2ce91f6f0690df24086aa09e2}\label{class_wardrobe_3_01_access_policies_1_1_l_i_f_o_01_4_a85e701e2ce91f6f0690df24086aa09e2}} 
+{\bfseries Wardrobe} (std\+::vector$<$ \mbox{\hyperlink{class_storage_box}{Storage\+Box}} $>$ shelves, std\+::string wardrobe\+Id)
+\item 
+bool \mbox{\hyperlink{class_wardrobe_3_01_access_policies_1_1_l_i_f_o_01_4_a84194df8839e61e42bb6564e8aac2960}{add\+Product}} (\mbox{\hyperlink{class_product}{Product}} $\ast$product, std\+::string storage\+Box\+Id)
+\item 
+bool \mbox{\hyperlink{class_wardrobe_3_01_access_policies_1_1_l_i_f_o_01_4_a2cdc24f45205d52b3c0533f505556c81}{remove\+Product}} (\mbox{\hyperlink{class_product}{Product}} $\ast$product, std\+::string storage\+Box\+Id)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_wardrobe_3_01_access_policies_1_1_l_i_f_o_01_4_ac09ef77134a8a50a45d8a51ece2d8052}\label{class_wardrobe_3_01_access_policies_1_1_l_i_f_o_01_4_ac09ef77134a8a50a45d8a51ece2d8052}} 
+std\+::vector$<$ \mbox{\hyperlink{class_storage_box}{Storage\+Box}} $>$ {\bfseries m\+\_\+shelves}
+\item 
+\mbox{\Hypertarget{class_wardrobe_3_01_access_policies_1_1_l_i_f_o_01_4_a36543de8df7d5307edcde05725ee84f2}\label{class_wardrobe_3_01_access_policies_1_1_l_i_f_o_01_4_a36543de8df7d5307edcde05725ee84f2}} 
+std\+::string {\bfseries m\+\_\+wardrobe\+Id}
+\item 
+\mbox{\Hypertarget{class_wardrobe_3_01_access_policies_1_1_l_i_f_o_01_4_ac82ce33c27d7c2afc661875649460a58}\label{class_wardrobe_3_01_access_policies_1_1_l_i_f_o_01_4_ac82ce33c27d7c2afc661875649460a58}} 
+std\+::stack$<$ \mbox{\hyperlink{class_product}{Product}} $\ast$ $>$ {\bfseries m\+\_\+products}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa specjalizacji szablonów dla polityki dostępu LIFO. Do przechowywania produktów wykorzystuje stos 
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_wardrobe_3_01_access_policies_1_1_l_i_f_o_01_4_a84194df8839e61e42bb6564e8aac2960}\label{class_wardrobe_3_01_access_policies_1_1_l_i_f_o_01_4_a84194df8839e61e42bb6564e8aac2960}} 
+\index{Wardrobe$<$ AccessPolicies::LIFO $>$@{Wardrobe$<$ AccessPolicies::LIFO $>$}!addProduct@{addProduct}}
+\index{addProduct@{addProduct}!Wardrobe$<$ AccessPolicies::LIFO $>$@{Wardrobe$<$ AccessPolicies::LIFO $>$}}
+\doxysubsubsection{\texorpdfstring{addProduct()}{addProduct()}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_wardrobe}{Wardrobe}}$<$ Access\+Policies\+::\+LIFO $>$\+::add\+Product (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_product}{Product}} $\ast$}]{product,  }\item[{std\+::string}]{storage\+Box\+Id }\end{DoxyParamCaption})}
+
+Dodaje przekazany produkt do wybranego z ui pudła przechowywania 
+\begin{DoxyParams}{Parametry}
+{\em product} & Wskaźnik przekazywanego obiektu produktu \\
+\hline
+{\em storage\+Box\+Id} & Identyfikator wybranego z ui pudła przechowywania \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Wartość bool określającą czy udało się dodać produkt 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_wardrobe_3_01_access_policies_1_1_l_i_f_o_01_4_a2cdc24f45205d52b3c0533f505556c81}\label{class_wardrobe_3_01_access_policies_1_1_l_i_f_o_01_4_a2cdc24f45205d52b3c0533f505556c81}} 
+\index{Wardrobe$<$ AccessPolicies::LIFO $>$@{Wardrobe$<$ AccessPolicies::LIFO $>$}!removeProduct@{removeProduct}}
+\index{removeProduct@{removeProduct}!Wardrobe$<$ AccessPolicies::LIFO $>$@{Wardrobe$<$ AccessPolicies::LIFO $>$}}
+\doxysubsubsection{\texorpdfstring{removeProduct()}{removeProduct()}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_wardrobe}{Wardrobe}}$<$ Access\+Policies\+::\+LIFO $>$\+::remove\+Product (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_product}{Product}} $\ast$}]{product,  }\item[{std\+::string}]{storage\+Box\+Id }\end{DoxyParamCaption})}
+
+Zdejmuje produkt z wybranej półki przechowywania o ile zezwala na to polityka dostepu szafy 
+\begin{DoxyParams}{Parametry}
+{\em product} & Wskaźnik na obiekt produktu do zdjęcia z szafy \\
+\hline
+{\em storage\+Box\+Id} & Identyfikator wybranego z ui pudła przechowywania \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Wartość bool określającą czy dany produkt można zdjąć z pudła 
+\end{DoxyReturn}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+business\+Logic/warehouse/lifowardrobe.\+h\item 
+business\+Logic/warehouse/lifowardrobe.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,38 @@
+\hypertarget{clickhandler_8h_source}{}\doxysection{clickhandler.\+h}
+\label{clickhandler_8h_source}\index{qtWidgetUI/events/clickhandler.h@{qtWidgetUI/events/clickhandler.h}}
+\mbox{\hyperlink{clickhandler_8h}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ piotr\ on\ 25.03.2023.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ WAREHOUSESIMULATOR\_CLICKHANDLER\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ WAREHOUSESIMULATOR\_CLICKHANDLER\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QFrame>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QMouseEvent>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_click_handler}{ClickHandler}}\ :\ \textcolor{keyword}{public}\ QObject\ \{}
+\DoxyCodeLine{00017\ Q\_OBJECT}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_click_handler}{ClickHandler}}(QObject\ *parent\ =\ \textcolor{keyword}{nullptr})\ :\ QObject(parent)\ \{\}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_click_handler_ab4a5c1663ea11cfd11b5a2d0dd4b546e}{eventFilter}}(QObject\ *obj,\ QEvent\ *event)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (event-\/>type()\ ==\ QEvent::MouseButtonPress)\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ QMouseEvent\ *mouseEvent\ =\ \textcolor{keyword}{static\_cast<}QMouseEvent*\textcolor{keyword}{>}(event);}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mouseEvent-\/>button()\ ==\ Qt::LeftButton\ \&\&\ obj-\/>isWidgetType())\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QWidget\ *widget\ =\ \textcolor{keyword}{static\_cast<}QWidget*\textcolor{keyword}{>}(obj);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ emit\ \mbox{\hyperlink{class_click_handler_a89c8aa4412f92d91a00377bef1deb064}{clicked}}(widget);}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ QObject::eventFilter(obj,\ event);}
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ signals:}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_click_handler_a89c8aa4412f92d91a00377bef1deb064}{clicked}}(QWidget\ *widget);}
+\DoxyCodeLine{00044\ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//WAREHOUSESIMULATOR\_CLICKHANDLER\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,28 @@
+\hypertarget{products_8h_source}{}\doxysection{products.\+h}
+\label{products_8h_source}\index{businessLogic/enums/products.h@{businessLogic/enums/products.h}}
+\mbox{\hyperlink{products_8h}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ piotr\ on\ 21.03.2023.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ WAREHOUSESIMULATOR\_PRODUCTS\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ WAREHOUSESIMULATOR\_PRODUCTS\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{products_8h_a71bd54d332ca6237b3ef35cf84cd891b}{Products}}\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{class_gaming_console}{GamingConsole}}\ =\ 0,\ }
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{products_8h_a71bd54d332ca6237b3ef35cf84cd891babb8134cd77c31c188e34a0355f88bbc3}{GamePad}}\ =\ 1,\ }
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_t_v}{TV}}\ =\ 2,\ }
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_keyboard}{Keyboard}}\ =\ 3\ }
+\DoxyCodeLine{00016\ \};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::vector<std::string>\ \mbox{\hyperlink{products_8h_aaf174bdaa633108d47482a5ba14515b0}{ProductsStrings}}\ =\ \{\ \textcolor{stringliteral}{"{}GamingConsole"{}},\ \textcolor{stringliteral}{"{}GamePad"{}},\ \textcolor{stringliteral}{"{}TV"{}},\ \textcolor{stringliteral}{"{}Keyboard"{}}\ \};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{products_8h_a97548047c12a27d43b8f48bd123cc3f5}{getProductText}}(\ \textcolor{keywordtype}{int}\ enumVal\ )}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{products_8h_aaf174bdaa633108d47482a5ba14515b0}{ProductsStrings}}[enumVal];}
+\DoxyCodeLine{00031\ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//WAREHOUSESIMULATOR\_PRODUCTS\_H}}
+
+\end{DoxyCode}

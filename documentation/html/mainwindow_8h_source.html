@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>WarehouseSimulator: Plik źródłowy qtWidgetUI/mainwindow.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">WarehouseSimulator<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Projekt magazynu symulującego przechowywanie różnego rodzaju produktów na szafkach z politykami dostępu FIFO, LIFO i  Free</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_59fa7787cc560eccfadef21b90d31adf.html">qtWidgetUI</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">mainwindow.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by piotr on 20.03.2023.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef WAREHOUSESIMULATOR_MAINWINDOW_H</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define WAREHOUSESIMULATOR_MAINWINDOW_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;QMainWindow&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;QPushButton&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;../businessLogic/enums/sizes.h&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;productcreator.h&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="clickhandler_8h.html">events/clickhandler.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;../businessLogic/warehouse/wardrobe.h&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;../businessLogic/warehouse/fifowardrobe.h&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;../businessLogic/warehouse/lifowardrobe.h&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>QT_BEGIN_NAMESPACE</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span>Ui { <span class="keyword">class </span><a class="code hl_class" href="class_main_window.html">MainWindow</a>; }</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>QT_END_NAMESPACE</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_main_window.html">   25</a></span><span class="keyword">class </span><a class="code hl_class" href="class_main_window.html">MainWindow</a> : <span class="keyword">public</span> QMainWindow {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    Q_OBJECT</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="class_main_window.html">MainWindow</a>(QWidget *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_class" href="class_main_window.html">~MainWindow</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_class" href="class_product_creator.html">ProductCreator</a>* m_productDB;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_class" href="class_ui_1_1_main_window.html">Ui::MainWindow</a> *ui;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_class" href="class_wardrobe.html">Wardrobe&lt;AccessPolicies::FIFO&gt;</a> *m_fifoWardrobe;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_class" href="class_wardrobe.html">Wardrobe&lt;AccessPolicies::LIFO&gt;</a> *m_lifoWardrobe;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_class" href="class_wardrobe.html">Wardrobe&lt;AccessPolicies::Free&gt;</a> *m_freeWardrobe;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_main_window.html#a81e2708bb61117ea39c2e6933325a0ca">initializeWardrobes</a>();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_main_window.html#a8c7681f1e71cd336fe109da2fd86d1eb">initializeWardrobe1ClickHandlers</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_main_window.html#ae40adf1b71ec5acebaf3daf856efb971">initializeWardrobe2ClickHandlers</a>();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_main_window.html#ae9196d172f42e22e747487df6a383c7e">initializeWardrobe3ClickHandlers</a>();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_main_window.html#ae4842445ceac3c4ffe48e235645382ff">addProductToStorageBox</a>(<a class="code hl_class" href="class_product.html">Product</a> *product, <span class="keyword">const</span> std::string&amp; storageBoxId);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_main_window.html#a4718099faa3466f11ee5c7a5ad383066">deleteProductFromStorageBox</a>(<a class="code hl_class" href="class_product.html">Product</a> *product, <span class="keyword">const</span> std::string&amp; storageBoxId);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_main_window.html#abdee2c7bf41c0c6fe9d60db165ec4820">showMessageBox</a>(<span class="keyword">const</span> std::string&amp; title, <span class="keyword">const</span> std::string&amp;  text);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="keyword">private</span> slots:</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_main_window.html#aef9e309e1db695d931ff4857ce14e7c2">onCreateProductBtnClick</a>();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_main_window.html#aae77b3db4b4ebab826dc329612936cfb">addNewProduct</a>(QWidget *widget);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_main_window.html#a9b9fce39ad220c9a98e69a814dad990d">moveProduct</a>(QWidget *widget);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_main_window.html#a279b6423b7deb039f663c3f189510748">onSendBtnClick</a>();</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>};</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="preprocessor">#endif </span><span class="comment">//WAREHOUSESIMULATOR_MAINWINDOW_H</span></div>
+<div class="ttc" id="aclass_main_window_html"><div class="ttname"><a href="class_main_window.html">MainWindow</a></div><div class="ttdef"><b>Definition:</b> mainwindow.h:25</div></div>
+<div class="ttc" id="aclass_main_window_html_a279b6423b7deb039f663c3f189510748"><div class="ttname"><a href="class_main_window.html#a279b6423b7deb039f663c3f189510748">MainWindow::onSendBtnClick</a></div><div class="ttdeci">void onSendBtnClick()</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:118</div></div>
+<div class="ttc" id="aclass_main_window_html_a4718099faa3466f11ee5c7a5ad383066"><div class="ttname"><a href="class_main_window.html#a4718099faa3466f11ee5c7a5ad383066">MainWindow::deleteProductFromStorageBox</a></div><div class="ttdeci">bool deleteProductFromStorageBox(Product *product, const std::string &amp;storageBoxId)</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:154</div></div>
+<div class="ttc" id="aclass_main_window_html_a81e2708bb61117ea39c2e6933325a0ca"><div class="ttname"><a href="class_main_window.html#a81e2708bb61117ea39c2e6933325a0ca">MainWindow::initializeWardrobes</a></div><div class="ttdeci">void initializeWardrobes()</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:186</div></div>
+<div class="ttc" id="aclass_main_window_html_a8c7681f1e71cd336fe109da2fd86d1eb"><div class="ttname"><a href="class_main_window.html#a8c7681f1e71cd336fe109da2fd86d1eb">MainWindow::initializeWardrobe1ClickHandlers</a></div><div class="ttdeci">void initializeWardrobe1ClickHandlers()</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:220</div></div>
+<div class="ttc" id="aclass_main_window_html_a9b9fce39ad220c9a98e69a814dad990d"><div class="ttname"><a href="class_main_window.html#a9b9fce39ad220c9a98e69a814dad990d">MainWindow::moveProduct</a></div><div class="ttdeci">void moveProduct(QWidget *widget)</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:65</div></div>
+<div class="ttc" id="aclass_main_window_html_aae77b3db4b4ebab826dc329612936cfb"><div class="ttname"><a href="class_main_window.html#aae77b3db4b4ebab826dc329612936cfb">MainWindow::addNewProduct</a></div><div class="ttdeci">void addNewProduct(QWidget *widget)</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:53</div></div>
+<div class="ttc" id="aclass_main_window_html_abdee2c7bf41c0c6fe9d60db165ec4820"><div class="ttname"><a href="class_main_window.html#abdee2c7bf41c0c6fe9d60db165ec4820">MainWindow::showMessageBox</a></div><div class="ttdeci">static void showMessageBox(const std::string &amp;title, const std::string &amp;text)</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:179</div></div>
+<div class="ttc" id="aclass_main_window_html_ae40adf1b71ec5acebaf3daf856efb971"><div class="ttname"><a href="class_main_window.html#ae40adf1b71ec5acebaf3daf856efb971">MainWindow::initializeWardrobe2ClickHandlers</a></div><div class="ttdeci">void initializeWardrobe2ClickHandlers()</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:264</div></div>
+<div class="ttc" id="aclass_main_window_html_ae4842445ceac3c4ffe48e235645382ff"><div class="ttname"><a href="class_main_window.html#ae4842445ceac3c4ffe48e235645382ff">MainWindow::addProductToStorageBox</a></div><div class="ttdeci">bool addProductToStorageBox(Product *product, const std::string &amp;storageBoxId)</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:129</div></div>
+<div class="ttc" id="aclass_main_window_html_ae9196d172f42e22e747487df6a383c7e"><div class="ttname"><a href="class_main_window.html#ae9196d172f42e22e747487df6a383c7e">MainWindow::initializeWardrobe3ClickHandlers</a></div><div class="ttdeci">void initializeWardrobe3ClickHandlers()</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:302</div></div>
+<div class="ttc" id="aclass_main_window_html_aef9e309e1db695d931ff4857ce14e7c2"><div class="ttname"><a href="class_main_window.html#aef9e309e1db695d931ff4857ce14e7c2">MainWindow::onCreateProductBtnClick</a></div><div class="ttdeci">void onCreateProductBtnClick()</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:49</div></div>
+<div class="ttc" id="aclass_product_creator_html"><div class="ttname"><a href="class_product_creator.html">ProductCreator</a></div><div class="ttdef"><b>Definition:</b> productcreator.h:19</div></div>
+<div class="ttc" id="aclass_product_html"><div class="ttname"><a href="class_product.html">Product</a></div><div class="ttdef"><b>Definition:</b> product.h:15</div></div>
+<div class="ttc" id="aclass_ui_1_1_main_window_html"><div class="ttname"><a href="class_ui_1_1_main_window.html">Ui::MainWindow</a></div><div class="ttdef"><b>Definition:</b> ui_MainWindow.h:239</div></div>
+<div class="ttc" id="aclass_wardrobe_html"><div class="ttname"><a href="class_wardrobe.html">Wardrobe</a></div><div class="ttdef"><b>Definition:</b> wardrobe.h:17</div></div>
+<div class="ttc" id="aclickhandler_8h_html"><div class="ttname"><a href="clickhandler_8h.html">clickhandler.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

@@ -1,0 +1,72 @@
+\hypertarget{class_keyboard}{}\doxysection{Dokumentacja klasy Keyboard}
+\label{class_keyboard}\index{Keyboard@{Keyboard}}
+
+
+{\ttfamily \#include $<$keyboard.\+h$>$}
+
+Diagram dziedziczenia dla Keyboard\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_keyboard}
+\end{center}
+\end{figure}
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_keyboard_a15c059f6eeb39c37a027a9e2b794cbcf}\label{class_keyboard_a15c059f6eeb39c37a027a9e2b794cbcf}} 
+{\bfseries Keyboard} (std\+::string name, std\+::string image\+Path, Sizes size)
+\item 
+std\+::string \mbox{\hyperlink{class_keyboard_ae5558cab072cdd1dc2d75557b8d7b9ef}{get\+Product\+Send\+Info}} () override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_product}{Product}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_product_a634bd1316471e1d6839b13af3e9e90cc}\label{class_product_a634bd1316471e1d6839b13af3e9e90cc}} 
+{\bfseries Product} (std\+::string name, std\+::string image\+Path, Sizes size)
+\item 
+std\+::string \mbox{\hyperlink{class_product_a5d6863c7a2d45dbcb469c2956b0aa333}{get\+Name}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_product_a14b96af5e98a24cb8476575476977fd1}{get\+Image\+Path}} ()
+\item 
+Sizes \mbox{\hyperlink{class_product_a95f9df58e3c02603a6c22a8283c7903d}{get\+Size}} ()
+\item 
+virtual std\+::string \mbox{\hyperlink{class_product_ae2b802d9b67740df43b7772a35861a96}{get\+Product\+Send\+Info}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Dodatkowe Dziedziczone Składowe}
+\doxysubsubsection*{Atrybuty chronione dziedziczone z \mbox{\hyperlink{class_product}{Product}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_product_ad9606cfc985df10f9bd222cfd8db5380}\label{class_product_ad9606cfc985df10f9bd222cfd8db5380}} 
+std\+::string {\bfseries m\+\_\+name}
+\item 
+\mbox{\Hypertarget{class_product_a59df8a4794c323fa080e430a3db88bbb}\label{class_product_a59df8a4794c323fa080e430a3db88bbb}} 
+std\+::string {\bfseries m\+\_\+image\+Path}
+\item 
+\mbox{\Hypertarget{class_product_a8a82e47ba4cf41cf9df51e36ec9bf826}\label{class_product_a8a82e47ba4cf41cf9df51e36ec9bf826}} 
+Sizes {\bfseries m\+\_\+product\+Size}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa opisująca produkt \mbox{\hyperlink{class_keyboard}{Keyboard}} dziedzicząca po klasie \mbox{\hyperlink{class_product}{Product}} 
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_keyboard_ae5558cab072cdd1dc2d75557b8d7b9ef}\label{class_keyboard_ae5558cab072cdd1dc2d75557b8d7b9ef}} 
+\index{Keyboard@{Keyboard}!getProductSendInfo@{getProductSendInfo}}
+\index{getProductSendInfo@{getProductSendInfo}!Keyboard@{Keyboard}}
+\doxysubsubsection{\texorpdfstring{getProductSendInfo()}{getProductSendInfo()}}
+{\footnotesize\ttfamily std\+::string Keyboard\+::get\+Product\+Send\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Zwraca}
+Informacja, którą można wyświetlić podczas wysyłki/zdejmowania towaru 
+\end{DoxyReturn}
+
+
+Reimplementowana z \mbox{\hyperlink{class_product_ae2b802d9b67740df43b7772a35861a96}{Product}}.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+business\+Logic/products/keyboard.\+h\item 
+business\+Logic/products/keyboard.\+cpp\end{DoxyCompactItemize}

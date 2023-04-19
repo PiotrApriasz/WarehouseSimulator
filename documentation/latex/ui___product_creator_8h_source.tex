@@ -1,0 +1,94 @@
+\hypertarget{ui___product_creator_8h_source}{}\doxysection{ui\+\_\+\+Product\+Creator.\+h}
+\label{ui___product_creator_8h_source}\index{cmake-\/build-\/debug/WarehouseSimulator\_autogen/include/ui\_ProductCreator.h@{cmake-\/build-\/debug/WarehouseSimulator\_autogen/include/ui\_ProductCreator.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ Form\ generated\ from\ reading\ UI\ file\ 'productcreator.ui'}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ Created\ by:\ Qt\ User\ Interface\ Compiler\ version\ 6.4.2}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**}}
+\DoxyCodeLine{00006\ \textcolor{comment}{**\ WARNING!\ All\ changes\ made\ in\ this\ file\ will\ be\ lost\ when\ recompiling\ UI\ file!}}
+\DoxyCodeLine{00007\ \textcolor{comment}{********************************************************************************/}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ UI\_PRODUCTCREATOR\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ UI\_PRODUCTCREATOR\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QtCore/QVariant>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QtWidgets/QApplication>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QtWidgets/QComboBox>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QtWidgets/QDialog>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QtWidgets/QLabel>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <QtWidgets/QPushButton>}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ui___product_creator}{Ui\_ProductCreator}}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ QPushButton\ *createBtn;}
+\DoxyCodeLine{00025\ \ \ \ \ QComboBox\ *productCB;}
+\DoxyCodeLine{00026\ \ \ \ \ QPushButton\ *cancelBtn;}
+\DoxyCodeLine{00027\ \ \ \ \ QComboBox\ *sizeCB;}
+\DoxyCodeLine{00028\ \ \ \ \ QLabel\ *label;}
+\DoxyCodeLine{00029\ \ \ \ \ QLabel\ *label\_2;}
+\DoxyCodeLine{00030\ \ \ \ \ QLabel\ *label\_3;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ setupUi(QDialog\ *\mbox{\hyperlink{class_product_creator}{ProductCreator}})}
+\DoxyCodeLine{00033\ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_product_creator}{ProductCreator}}-\/>objectName().isEmpty())}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_product_creator}{ProductCreator}}-\/>setObjectName(\textcolor{stringliteral}{"{}ProductCreator"{}});}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_product_creator}{ProductCreator}}-\/>resize(400,\ 350);}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_product_creator}{ProductCreator}}-\/>setMinimumSize(QSize(400,\ 300));}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_product_creator}{ProductCreator}}-\/>setMaximumSize(QSize(715,\ 400));}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_product_creator}{ProductCreator}}-\/>setModal(\textcolor{keyword}{false});}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ createBtn\ =\ \textcolor{keyword}{new}\ QPushButton(\mbox{\hyperlink{class_product_creator}{ProductCreator}});}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ createBtn-\/>setObjectName(\textcolor{stringliteral}{"{}createBtn"{}});}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ createBtn-\/>setGeometry(QRect(20,\ 290,\ 131,\ 31));}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ productCB\ =\ \textcolor{keyword}{new}\ QComboBox(\mbox{\hyperlink{class_product_creator}{ProductCreator}});}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ productCB-\/>setObjectName(\textcolor{stringliteral}{"{}productCB"{}});}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ productCB-\/>setGeometry(QRect(60,\ 100,\ 261,\ 41));}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ cancelBtn\ =\ \textcolor{keyword}{new}\ QPushButton(\mbox{\hyperlink{class_product_creator}{ProductCreator}});}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ cancelBtn-\/>setObjectName(\textcolor{stringliteral}{"{}cancelBtn"{}});}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ cancelBtn-\/>setGeometry(QRect(250,\ 290,\ 131,\ 31));}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ sizeCB\ =\ \textcolor{keyword}{new}\ QComboBox(\mbox{\hyperlink{class_product_creator}{ProductCreator}});}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ sizeCB-\/>setObjectName(\textcolor{stringliteral}{"{}sizeCB"{}});}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ sizeCB-\/>setGeometry(QRect(60,\ 190,\ 261,\ 41));}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ label\ =\ \textcolor{keyword}{new}\ QLabel(\mbox{\hyperlink{class_product_creator}{ProductCreator}});}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ label-\/>setObjectName(\textcolor{stringliteral}{"{}label"{}});}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ label-\/>setGeometry(QRect(60,\ 80,\ 49,\ 16));}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ label\_2\ =\ \textcolor{keyword}{new}\ QLabel(\mbox{\hyperlink{class_product_creator}{ProductCreator}});}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ label\_2-\/>setObjectName(\textcolor{stringliteral}{"{}label\_2"{}});}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ label\_2-\/>setGeometry(QRect(60,\ 170,\ 49,\ 16));}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ label\_3\ =\ \textcolor{keyword}{new}\ QLabel(\mbox{\hyperlink{class_product_creator}{ProductCreator}});}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ label\_3-\/>setObjectName(\textcolor{stringliteral}{"{}label\_3"{}});}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ label\_3-\/>setGeometry(QRect(130,\ 30,\ 131,\ 16));}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ QFont\ font;}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ font.setPointSize(14);}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ label\_3-\/>setFont(font);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ retranslateUi(\mbox{\hyperlink{class_product_creator}{ProductCreator}});}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ QMetaObject::connectSlotsByName(\mbox{\hyperlink{class_product_creator}{ProductCreator}});}
+\DoxyCodeLine{00068\ \ \ \ \ \}\ \textcolor{comment}{//\ setupUi}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ retranslateUi(QDialog\ *\mbox{\hyperlink{class_product_creator}{ProductCreator}})}
+\DoxyCodeLine{00071\ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_product_creator}{ProductCreator}}-\/>setWindowTitle(QCoreApplication::translate(\textcolor{stringliteral}{"{}ProductCreator"{}},\ \textcolor{stringliteral}{"{}Create\ Product"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ createBtn-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}ProductCreator"{}},\ \textcolor{stringliteral}{"{}Create"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ cancelBtn-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}ProductCreator"{}},\ \textcolor{stringliteral}{"{}Cancel"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ label-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}ProductCreator"{}},\ \textcolor{stringliteral}{"{}Product"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ label\_2-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}ProductCreator"{}},\ \textcolor{stringliteral}{"{}Size"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ label\_3-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}ProductCreator"{}},\ \textcolor{stringliteral}{"{}Create\ Product"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00078\ \ \ \ \ \}\ \textcolor{comment}{//\ retranslateUi}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{keyword}{namespace\ }Ui\ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ui_1_1_product_creator}{ProductCreator}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_ui___product_creator}{Ui\_ProductCreator}}\ \{\};}
+\DoxyCodeLine{00084\ \}\ \textcolor{comment}{//\ namespace\ Ui}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ UI\_PRODUCTCREATOR\_H}}
+
+\end{DoxyCode}

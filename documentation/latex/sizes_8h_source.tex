@@ -1,0 +1,26 @@
+\hypertarget{sizes_8h_source}{}\doxysection{sizes.\+h}
+\label{sizes_8h_source}\index{businessLogic/enums/sizes.h@{businessLogic/enums/sizes.h}}
+\mbox{\hyperlink{sizes_8h}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ piotr\ on\ 20.03.2023.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ WAREHOUSESIMULATOR\_SIZES\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ WAREHOUSESIMULATOR\_SIZES\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{enum\ class}\ Sizes\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ Small,\ Medium,\ Big}
+\DoxyCodeLine{00013\ \};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::vector<std::string>\ \mbox{\hyperlink{sizes_8h_a887bbbfd20743ab8a03d545e085f57e7}{SizesStrings}}\ =\ \{\ \textcolor{stringliteral}{"{}Small"{}},\ \textcolor{stringliteral}{"{}Medium"{}},\ \textcolor{stringliteral}{"{}Big"{}}\ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{sizes_8h_a4058161605754fb9e698b2dbf6237085}{getSizeText}}(\ \textcolor{keywordtype}{int}\ enumVal\ )}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{sizes_8h_a887bbbfd20743ab8a03d545e085f57e7}{SizesStrings}}[enumVal];}
+\DoxyCodeLine{00028\ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//WAREHOUSESIMULATOR\_SIZES\_H}}
+
+\end{DoxyCode}

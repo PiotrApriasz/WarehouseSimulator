@@ -1,0 +1,80 @@
+\hypertarget{class_wardrobe}{}\doxysection{Dokumentacja szablonu klasy Wardrobe\texorpdfstring{$<$}{<} Access\+Policy\+Type \texorpdfstring{$>$}{>}}
+\label{class_wardrobe}\index{Wardrobe$<$ AccessPolicyType $>$@{Wardrobe$<$ AccessPolicyType $>$}}
+
+
+{\ttfamily \#include $<$wardrobe.\+h$>$}
+
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_wardrobe_a7955cf8361e5c1959a70880a82f27e45}\label{class_wardrobe_a7955cf8361e5c1959a70880a82f27e45}} 
+{\bfseries Wardrobe} (std\+::vector$<$ \mbox{\hyperlink{class_storage_box}{Storage\+Box}} $>$ shelves, std\+::string wardrobe\+Id)
+\item 
+bool \mbox{\hyperlink{class_wardrobe_a9341627b8aa5e40c3dedfd5afc6bd745}{add\+Product}} (\mbox{\hyperlink{class_product}{Product}} $\ast$product, std\+::string storage\+Box\+Id)
+\item 
+bool \mbox{\hyperlink{class_wardrobe_a44ccc04f067acd3be605c88287c8b571}{remove\+Product}} (\mbox{\hyperlink{class_product}{Product}} $\ast$product, std\+::string storage\+Box\+Id)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_wardrobe_a7cd22ef77e1cd3e52a27a288de54a798}\label{class_wardrobe_a7cd22ef77e1cd3e52a27a288de54a798}} 
+std\+::vector$<$ \mbox{\hyperlink{class_storage_box}{Storage\+Box}} $>$ {\bfseries m\+\_\+shelves}
+\item 
+\mbox{\Hypertarget{class_wardrobe_a67665380f14393af05483426106fcd70}\label{class_wardrobe_a67665380f14393af05483426106fcd70}} 
+std\+::string {\bfseries m\+\_\+wardrobe\+Id}
+\item 
+\mbox{\Hypertarget{class_wardrobe_acc4fa6a2df0d236615ae42ed9de921de}\label{class_wardrobe_acc4fa6a2df0d236615ae42ed9de921de}} 
+std\+::vector$<$ \mbox{\hyperlink{class_product}{Product}} $\ast$ $>$ {\bfseries m\+\_\+products}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+\subsubsection*{template$<$\mbox{\hyperlink{accesspolicies_8h_a8752a5f4be67e47bb68a38b91e61dbf0}{Access\+Policies}} Access\+Policy\+Type$>$\newline
+class Wardrobe$<$ Access\+Policy\+Type $>$}
+Klasa główna specjalizacji szablonów opisująca szafę do przechowywania produktów 
+\begin{DoxyTemplParams}{Parametry Szablonu}
+{\em Access\+Policy\+Type} & Wartość enum polityki dostępu do szafy. Określa specjalizacje danego obiektu \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_wardrobe_a9341627b8aa5e40c3dedfd5afc6bd745}\label{class_wardrobe_a9341627b8aa5e40c3dedfd5afc6bd745}} 
+\index{Wardrobe$<$ AccessPolicyType $>$@{Wardrobe$<$ AccessPolicyType $>$}!addProduct@{addProduct}}
+\index{addProduct@{addProduct}!Wardrobe$<$ AccessPolicyType $>$@{Wardrobe$<$ AccessPolicyType $>$}}
+\doxysubsubsection{\texorpdfstring{addProduct()}{addProduct()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{accesspolicies_8h_a8752a5f4be67e47bb68a38b91e61dbf0}{Access\+Policies}} Access\+Policy\+Type$>$ \\
+bool \mbox{\hyperlink{class_wardrobe}{Wardrobe}}$<$ Access\+Policy\+Type $>$\+::add\+Product (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_product}{Product}} $\ast$}]{product,  }\item[{std\+::string}]{storage\+Box\+Id }\end{DoxyParamCaption})}
+
+Dodaje przekazany produkt do wybranego z ui pudła przechowywania 
+\begin{DoxyParams}{Parametry}
+{\em product} & Wskaźnik przekazywanego obiektu produktu \\
+\hline
+{\em storage\+Box\+Id} & Identyfikator wybranego z ui pudła przechowywania \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Wartość bool określającą czy udało się dodać produkt 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_wardrobe_a44ccc04f067acd3be605c88287c8b571}\label{class_wardrobe_a44ccc04f067acd3be605c88287c8b571}} 
+\index{Wardrobe$<$ AccessPolicyType $>$@{Wardrobe$<$ AccessPolicyType $>$}!removeProduct@{removeProduct}}
+\index{removeProduct@{removeProduct}!Wardrobe$<$ AccessPolicyType $>$@{Wardrobe$<$ AccessPolicyType $>$}}
+\doxysubsubsection{\texorpdfstring{removeProduct()}{removeProduct()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{accesspolicies_8h_a8752a5f4be67e47bb68a38b91e61dbf0}{Access\+Policies}} Access\+Policy\+Type$>$ \\
+bool \mbox{\hyperlink{class_wardrobe}{Wardrobe}}$<$ Access\+Policy\+Type $>$\+::remove\+Product (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_product}{Product}} $\ast$}]{product,  }\item[{std\+::string}]{storage\+Box\+Id }\end{DoxyParamCaption})}
+
+Zdejmuje produkt z wybranej półki przechowywania o ile zezwala na to polityka dostepu szafy 
+\begin{DoxyParams}{Parametry}
+{\em product} & Wskaźnik na obiekt produktu do zdjęcia z szafy \\
+\hline
+{\em storage\+Box\+Id} & Identyfikator wybranego z ui pudła przechowywania \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Wartość bool określającą czy dany produkt można zdjąć z pudła 
+\end{DoxyReturn}
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+business\+Logic/warehouse/wardrobe.\+h\end{DoxyCompactItemize}
