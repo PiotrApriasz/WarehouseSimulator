@@ -13,6 +13,9 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class ProductCreator; }
 QT_END_NAMESPACE
 
+/**
+ * Klasa reprezentująca okno kreatora produktów. Dziedziczy po klasie QDialog.
+ */
 class ProductCreator : public QDialog {
 Q_OBJECT
 
@@ -27,6 +30,11 @@ private:
     QList<QString> convertEnums(std::vector<std::string> enumNames);
 
 signals:
+    /**
+     * Sygnał sygnalizujący utworznie nowego widgetu produktu
+     * @param widget Wskażnik na obiekt utworzonego widgetu produktu
+     * @return Zwraca wskaźnik utworzonego widgetu produktu
+     */
     ProductWidget* productAdded(ProductWidget *widget);
 
 private slots:

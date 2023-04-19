@@ -9,11 +9,28 @@
 #include "../enums/accesspolicies.h"
 #include "storagebox.h"
 
+/**
+ * Klasa główna specjalizacji szablonów opisująca szafę do przechowywania produktów
+ * @tparam AccessPolicyType Wartość enum polityki dostępu do szafy. Określa specjalizacje danego obiektu
+ */
 template <AccessPolicies AccessPolicyType>
 class Wardrobe {
 public:
     explicit Wardrobe(std::vector<StorageBox> shelves, std::string wardrobeId);
+
+    /**
+     * Dodaje przekazany produkt do wybranego z ui pudła przechowywania
+     * @param product Wskaźnik przekazywanego obiektu produktu
+     * @param storageBoxId Identyfikator wybranego z ui pudła przechowywania
+     * @return Wartość bool określającą czy udało się dodać produkt
+     */
     bool addProduct(Product *product, std::string storageBoxId);
+    /**
+     * Zdejmuje produkt z wybranej półki przechowywania o ile zezwala na to polityka dostepu szafy
+     * @param product Wskaźnik na obiekt produktu do zdjęcia z szafy
+     * @param storageBoxId Identyfikator wybranego z ui pudła przechowywania
+     * @return Wartość bool określającą czy dany produkt można zdjąć z pudła
+     */
     bool removeProduct(Product *product, std::string storageBoxId);
 
 private:

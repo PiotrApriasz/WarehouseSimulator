@@ -8,11 +8,17 @@
 #include "product.h"
 #include "../enums/sizes.h"
 
+/**
+ * Klasa opisująca produkt Gamepad dziedzicząca po klasie Product
+ */
 class Gamepad : public Product {
 
 public:
     explicit Gamepad(std::string name, std::string imagePath, Sizes size);
 
+    /**
+     * @return Informacja, którą można wyświetlić podczas wysyłki/zdejmowania towaru
+     */
     std::string getProductSendInfo() override;
 };
 

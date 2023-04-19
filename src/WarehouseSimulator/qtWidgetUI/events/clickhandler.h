@@ -9,17 +9,26 @@
 #include <QMouseEvent>
 #include <QObject>
 
+/**
+ * @file
+ * Klasa pozwalająca zaimplementować własną obsługę kliku myszki dla dowolnego obiektu  Qt
+ */
 class ClickHandler : public QObject {
 Q_OBJECT
 public:
     ClickHandler(QObject *parent = nullptr) : QObject(parent) {}
 
+    /**
+     * Event wyzwalany w momencie kliknięcia na obiekt, w którym zainstaloany jest poniższy filtr
+     * @param obj Wskaźnik na kliknięty obiekt
+     * @param event
+     * @return
+     */
     bool eventFilter(QObject *obj, QEvent *event) override {
         if (event->type() == QEvent::MouseButtonPress) {
             QMouseEvent *mouseEvent = static_cast<QMouseEvent*>(event);
             if (mouseEvent->button() == Qt::LeftButton && obj->isWidgetType()) {
                 QWidget *widget = static_cast<QWidget*>(obj);
-                // Left button was clicked on the widget, emit a signal or do some other action
                 emit clicked(widget);
             }
         }
@@ -27,6 +36,10 @@ public:
     }
 
 signals:
+    /**
+     * Sygnał jaki jest wysyłany kiedy obiekt zostanie kliknięty
+     * @param widget Wskaźnik na kliknięty obiekt
+     */
     void clicked(QWidget *widget);
 };
 

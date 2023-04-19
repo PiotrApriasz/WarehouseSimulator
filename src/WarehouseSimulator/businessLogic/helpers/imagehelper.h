@@ -10,8 +10,17 @@
 #include "../enums/sizes.h"
 #include "../enums/products.h"
 
+/**
+ * Klasa statyczna wspomagająca pracę z obrazami produktów
+ */
 class ImageHelper {
 public:
+    /**
+     * Metoda zwracająca ściężkę do odpowiedniego obrazu produktu
+     * @param product Obiekt produktu, którego obraz należy pobrać
+     * @param size Rozmiar produktu
+     * @return Ścieżka dostępu do odnalezionego towaru
+     */
     static std::string getProductImagePath(Products product, Sizes size);
 private:
     ImageHelper() = default;

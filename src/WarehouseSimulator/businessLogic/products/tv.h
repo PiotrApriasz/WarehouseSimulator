@@ -8,11 +8,16 @@
 #include "product.h"
 #include "../enums/sizes.h"
 
-
+/**
+ * Klasa opisująca produkt TV dziedzicząca po klasie Product
+ */
 class TV : public Product {
 public:
     explicit TV(std::string name, std::string imagePath, Sizes size);
 
+    /**
+     * @return Informacja, którą można wyświetlić podczas wysyłki/zdejmowania towaru
+     */
     std::string getProductSendInfo() override;
 };
 
